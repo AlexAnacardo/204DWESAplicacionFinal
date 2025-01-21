@@ -42,7 +42,7 @@
         <footer>
             <p><a href="../index.html">Alex Asensio Sanchez</a></p>
             <p><a href="../204DWESProyectoDWES/indexProyectoDWES.php">DWES</a></p>
-            <p><a target="blank" href="https://github.com/AlexAnacardo/204DWESLoginLogoffTema6.git">Repositorio del proyecto</a></p>
+            <p><a target="blank" href="https://github.com/AlexAnacardo/204DWESAplicacionFinal.git">Repositorio del proyecto</a></p>
             <p><a target="blank" href="https://www.amazon.es">Pagina imitada</a></p>
             <p><a target="vlank" href="doc/phpdoc/index.html">Documentación (PhpDoc)</a></p>
         </footer>

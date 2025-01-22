@@ -1,6 +1,6 @@
 <header id="headerInicioPublico">
     <img id="logo" src="webroot/images/logo.png">
-    <h1>Aplicacion Login logoff</h1>
+    <h1>Aplicacion Final</h1>
     <form method='post'>                                                
         <div class='dropdown'>
             <?php

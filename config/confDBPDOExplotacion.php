@@ -5,7 +5,7 @@
     define('CONEXION', 'mysql:host=localhost;port=3306;dbname=DB204DWESLoginLogoffTema6');
     
     //Nombre del usuario que usaremos para conectarnos
-    define('USUARIO', 'user204DWESLoginLogoffTema6');
+    define('USUARIO', 'user204DWESAplicacionFinal');
     
     //Contraseña del usuario que usaremos para conectarnos
     define('CONTRASEÑA', 'paso1234A,l');

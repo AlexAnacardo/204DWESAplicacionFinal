@@ -1,10 +1,10 @@
-create database DB204DWESLoginLogoffTema6;
+create database DB204DWES;
 
-use DB204DWESLoginLogoffTema6;
+use DB204DWES;
 
-create user if not exists 'user204DWESLoginLogoffTema6'@'%' identified by 'paso';
+create user if not exists 'user204DWESAplicacionFinal'@'%' identified by 'paso';
 
-grant all privileges on DB204DWESLoginLogoffTema6.* to 'user204DWESLoginLogoffTema6'@'%';
+grant all privileges on DB204DWES.* to 'user204DWESAplicacionFinal'@'%';
 
 
 

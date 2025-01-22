@@ -1,4 +1,4 @@
-use DB204DWESLoginLogoffTema6;
+use DB204DWES;
 
 insert into T02_Departamento values('PES', 'Pescaderia', now(), 100.34, null),
 ('CHA', 'Charcuteria', now(), 2500.46, null),

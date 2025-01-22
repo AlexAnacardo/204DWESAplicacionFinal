@@ -169,13 +169,6 @@ header form{
 }
 
 #contenedorCarrusel{
-    /*height: 100%;
-    width: 100%;
-    background-image: url("/204DWESLoginLogoffTema6/webroot/images/navegacion.PNG");
-    background-repeat: no-repeat;
-    background-position: center;
-    position: relative;
-    */
             margin: 0 auto;
             overflow: hidden;
             position: relative;
@@ -209,7 +202,7 @@ header form{
                 display: flex;
                 justify-content: center;
                 gap: 10px;
-                margin-left: 100%;
+                margin-left: 80%;
             }  
             input{
                 display: none;
@@ -230,16 +223,16 @@ header form{
             transform: translate(1000px);
         }
         #two:checked ~ .photos{
-            transform: translate(400px);
+            transform: translate(600px);
         }
         #three:checked ~ .photos{
-            transform: translate(-200px);
+            transform: translate(70px);
         }
         #four:checked ~ .photos{
-            transform: translate(-600px);
+            transform: translate(-300px);
         }
         #five:checked ~ .photos{
-            transform: translate(-1055px);
+            transform: translate(-850px);
         }
         #one:checked ~ .buttons #lbl1,        
         #two:checked ~ .buttons #lbl2,

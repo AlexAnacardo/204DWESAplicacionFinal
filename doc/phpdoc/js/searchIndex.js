@@ -196,6 +196,76 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/ErrorApp.html#property_paginaSiguiente"
         },                {
+            "fqsen": "\\FotoNasa",
+            "name": "FotoNasa",
+            "summary": "Clase\u0020para\u0020contener\u0020informacion\u0020de\u0020una\u0020foto",
+            "url": "classes/FotoNasa.html"
+        },                {
+            "fqsen": "\\FotoNasa\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Constructor\u0020de\u0020la\u0020clase\u0020FotoNasa.",
+            "url": "classes/FotoNasa.html#method___construct"
+        },                {
+            "fqsen": "\\FotoNasa\u003A\u003AgetTitulo\u0028\u0029",
+            "name": "getTitulo",
+            "summary": "Obtiene\u0020el\u0020t\u00EDtulo\u0020de\u0020la\u0020foto.",
+            "url": "classes/FotoNasa.html#method_getTitulo"
+        },                {
+            "fqsen": "\\FotoNasa\u003A\u003AgetUrl\u0028\u0029",
+            "name": "getUrl",
+            "summary": "Obtiene\u0020la\u0020URL\u0020de\u0020la\u0020foto.",
+            "url": "classes/FotoNasa.html#method_getUrl"
+        },                {
+            "fqsen": "\\FotoNasa\u003A\u003AgetExplicacion\u0028\u0029",
+            "name": "getExplicacion",
+            "summary": "Obtiene\u0020la\u0020explicaci\u00F3n\u0020de\u0020la\u0020foto.",
+            "url": "classes/FotoNasa.html#method_getExplicacion"
+        },                {
+            "fqsen": "\\FotoNasa\u003A\u003AsetTitulo\u0028\u0029",
+            "name": "setTitulo",
+            "summary": "Establece\u0020un\u0020nuevo\u0020t\u00EDtulo\u0020para\u0020la\u0020foto.",
+            "url": "classes/FotoNasa.html#method_setTitulo"
+        },                {
+            "fqsen": "\\FotoNasa\u003A\u003AsetUrl\u0028\u0029",
+            "name": "setUrl",
+            "summary": "Establece\u0020una\u0020nueva\u0020URL\u0020para\u0020la\u0020foto.",
+            "url": "classes/FotoNasa.html#method_setUrl"
+        },                {
+            "fqsen": "\\FotoNasa\u003A\u003AsetExplicacion\u0028\u0029",
+            "name": "setExplicacion",
+            "summary": "Establece\u0020una\u0020nueva\u0020explicaci\u00F3n\u0020para\u0020la\u0020foto.",
+            "url": "classes/FotoNasa.html#method_setExplicacion"
+        },                {
+            "fqsen": "\\FotoNasa\u003A\u003A\u0024titulo",
+            "name": "titulo",
+            "summary": "",
+            "url": "classes/FotoNasa.html#property_titulo"
+        },                {
+            "fqsen": "\\FotoNasa\u003A\u003A\u0024url",
+            "name": "url",
+            "summary": "",
+            "url": "classes/FotoNasa.html#property_url"
+        },                {
+            "fqsen": "\\FotoNasa\u003A\u003A\u0024explicacion",
+            "name": "explicacion",
+            "summary": "",
+            "url": "classes/FotoNasa.html#property_explicacion"
+        },                {
+            "fqsen": "\\REST",
+            "name": "REST",
+            "summary": "Clase\u0020REST",
+            "url": "classes/REST.html"
+        },                {
+            "fqsen": "\\REST\u003A\u003ArecogerImagenNasa\u0028\u0029",
+            "name": "recogerImagenNasa",
+            "summary": "Obtiene\u0020una\u0020imagen\u0020de\u0020la\u0020NASA\u0020\u0028APOD\u0029\u0020para\u0020una\u0020fecha\u0020espec\u00EDfica.",
+            "url": "classes/REST.html#method_recogerImagenNasa"
+        },                {
+            "fqsen": "\\REST\u003A\u003AclaveApiNasa",
+            "name": "claveApiNasa",
+            "summary": "Clave\u0020de\u0020API\u0020para\u0020acceder\u0020a\u0020los\u0020servicios\u0020de\u0020la\u0020NASA.",
+            "url": "classes/REST.html#constant_claveApiNasa"
+        },                {
             "fqsen": "\\Usuario",
             "name": "Usuario",
             "summary": "",

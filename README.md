@@ -1,10 +1,10 @@
-# 204DWESLoginLogoffTema6
+# 204DWESAplicacionFinal
 
 ## Asignatura: Desarrollo Web en Entorno Servidor
 
 - **Autor**: Alex Asensio Sanchez
 - **Fecha Inicio Proyecto**: 18/12/2024
-- **Última Actualización**: 18/12/2024
+- **Última Actualización**: 24/01/2025
 
 ---
 

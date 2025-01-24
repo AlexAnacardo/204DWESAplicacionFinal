@@ -85,11 +85,38 @@
             <li class="phpdocumentor-breadcrumb"><a href="packages/Application.html">Application</a></li>
     </ul>
 
-    <article class="phpdocumentor-element -file">
-        <h2 class="phpdocumentor-content__title">confDBPDO.php</h2>
+    <article class="phpdocumentor-element -class">
+        <h2 class="phpdocumentor-content__title">
+    REST
 
-        
+    
+            <div class="phpdocumentor-element__package">
+            in package
+            <ul class="phpdocumentor-breadcrumbs">
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Application.html">Application</a></li>
+                            </ul>
+        </div>
+    
+    
+    </h2>
 
+<div class="phpdocumentor-label-line">
+
+
+</div>
+
+        <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="model/REST.php"><a href="files/model-rest.html"><abbr title="model/REST.php">REST.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">7</span>
+
+    </aside>
+
+            <p class="phpdocumentor-summary">Clase REST</p>
+
+
+    <section class="phpdocumentor-description"><p>Esta clase proporciona métodos para interactuar diversas API</p>
+</section>
 
 
 
@@ -99,7 +126,7 @@
 
 <h3 id="toc">
     Table of Contents
-    <a href="files/config-confdbpdo.html#toc" class="headerlink"><i class="fas fa-link"></i></a>
+    <a href="classes/REST.html#toc" class="headerlink"><i class="fas fa-link"></i></a>
 
 </h3>
 
@@ -111,33 +138,35 @@
 
 <h4 id="toc-constants">
     Constants
-    <a href="files/config-confdbpdo.html#toc-constants" class="headerlink"><i class="fas fa-link"></i></a>
+    <a href="classes/REST.html#toc-constants" class="headerlink"><i class="fas fa-link"></i></a>
 
 </h4>
 <dl class="phpdocumentor-table-of-contents">
             <dt class="phpdocumentor-table-of-contents__entry -constant -public">
-    <a class="" href="namespaces/default.html#constant_CONEXION">CONEXION</a>
+    <a class="" href="classes/REST.html#constant_claveApiNasa">claveApiNasa</a>
     <span>
-        &nbsp;= &#039;mysql:host=daw204.isauces.local;port=3306;dbname=DB204DWES&#039;                            </span>
+        &nbsp;= &#039;VsYbmhgR6eLeRLrMI8Ody4p5CrNLecqGqedsu46e&#039;                            </span>
 </dt>
-
-            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
-    <a class="" href="namespaces/default.html#constant_CONTRASE%C3%91A">CONTRASEÑA</a>
-    <span>
-        &nbsp;= &#039;paso&#039;                            </span>
-</dt>
-
-            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
-    <a class="" href="namespaces/default.html#constant_USUARIO">USUARIO</a>
-    <span>
-        &nbsp;= &#039;user204DWESAplicacionFinal&#039;                            </span>
-</dt>
+<dd>Clave de API para acceder a los servicios de la NASA.</dd>
 
     </dl>
 
 
 
+<h4 id="toc-methods">
+    Methods
+    <a href="classes/REST.html#toc-methods" class="headerlink"><i class="fas fa-link"></i></a>
 
+</h4>
+<dl class="phpdocumentor-table-of-contents">
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a class="" href="classes/REST.html#method_recogerImagenNasa">recogerImagenNasa()</a>
+    <span>
+                                &nbsp;: <a href="classes/FotoNasa.html"><abbr title="\FotoNasa">FotoNasa</abbr></a>|null    </span>
+</dt>
+<dd>Obtiene una imagen de la NASA (APOD) para una fecha específica.</dd>
+
+    </dl>
 
 
 
@@ -145,96 +174,37 @@
     <section class="phpdocumentor-constants">
         <h3 class="phpdocumentor-elements__header" id="constants">
             Constants
-            <a href="files/config-confdbpdo.html#constants" class="headerlink"><i class="fas fa-link"></i></a>
+            <a href="classes/REST.html#constants" class="headerlink"><i class="fas fa-link"></i></a>
 
         </h3>
                     <article class="phpdocumentor-element -constant -public ">
-    <h4 class="phpdocumentor-element__name" id="constant_CONEXION">
-        CONEXION
-        <a href="namespaces/default.html#constant_CONEXION" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="constant_claveApiNasa">
+        claveApiNasa
+        <a href="classes/REST.html#constant_claveApiNasa" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
 
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="config/confDBPDO.php"><a href="files/config-confdbpdo.html"><abbr title="config/confDBPDO.php">confDBPDO.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="model/REST.php"><a href="files/model-rest.html"><abbr title="model/REST.php">REST.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">7</span>
+    <span class="phpdocumentor-element-found-in__line">14</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Clave de API para acceder a los servicios de la NASA.</p>
+
     
     <code class="phpdocumentor-signature phpdocumentor-code ">
     <span class="phpdocumentor-signature__visibility">public</span>
-        <span class="phpdocumentor-signature__type">mixed</span>
-    <span class="phpdocumentor-signature__name">CONEXION</span>
-    = <span class="phpdocumentor-signature__default-value">&#039;mysql:host=daw204.isauces.local;port=3306;dbname=DB204DWES&#039;</span>
+        <span class="phpdocumentor-signature__type">string</span>
+    <span class="phpdocumentor-signature__name">claveApiNasa</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;VsYbmhgR6eLeRLrMI8Ody4p5CrNLecqGqedsu46e&#039;</span>
 </code>
 
 
-    
-    
-    
+        <section class="phpdocumentor-description"><p>Esta clave es necesaria para realizar solicitudes a la API de la NASA.</p>
+</section>
 
-    
-
-</article>
-                    <article class="phpdocumentor-element -constant -public ">
-    <h4 class="phpdocumentor-element__name" id="constant_CONTRASEÑA">
-        CONTRASEÑA
-        <a href="namespaces/default.html#constant_CONTRASE%C3%91A" class="headerlink"><i class="fas fa-link"></i></a>
-
-    </h4>
-
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="config/confDBPDO.php"><a href="files/config-confdbpdo.html"><abbr title="config/confDBPDO.php">confDBPDO.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">13</span>
-
-    </aside>
-
-    
-    
-    <code class="phpdocumentor-signature phpdocumentor-code ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-        <span class="phpdocumentor-signature__type">mixed</span>
-    <span class="phpdocumentor-signature__name">CONTRASEÑA</span>
-    = <span class="phpdocumentor-signature__default-value">&#039;paso&#039;</span>
-</code>
-
-
-    
-    
-    
-
-    
-
-</article>
-                    <article class="phpdocumentor-element -constant -public ">
-    <h4 class="phpdocumentor-element__name" id="constant_USUARIO">
-        USUARIO
-        <a href="namespaces/default.html#constant_USUARIO" class="headerlink"><i class="fas fa-link"></i></a>
-
-    </h4>
-
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="config/confDBPDO.php"><a href="files/config-confdbpdo.html"><abbr title="config/confDBPDO.php">confDBPDO.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">10</span>
-
-    </aside>
-
-    
-    
-    <code class="phpdocumentor-signature phpdocumentor-code ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-        <span class="phpdocumentor-signature__type">mixed</span>
-    <span class="phpdocumentor-signature__name">USUARIO</span>
-    = <span class="phpdocumentor-signature__default-value">&#039;user204DWESAplicacionFinal&#039;</span>
-</code>
-
-
-    
     
     
 
@@ -244,11 +214,80 @@
             </section>
 
         
+
+            <section class="phpdocumentor-methods">
+        <h3 class="phpdocumentor-elements__header" id="methods">
+            Methods
+            <a href="classes/REST.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
+
+        </h3>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                    -static                    "
+>
+    <h4 class="phpdocumentor-element__name" id="method_recogerImagenNasa">
+        recogerImagenNasa()
+        <a href="classes/REST.html#method_recogerImagenNasa" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="model/REST.php"><a href="files/model-rest.html"><abbr title="model/REST.php">REST.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">27</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Obtiene una imagen de la NASA (APOD) para una fecha específica.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+            <span class="phpdocumentor-signature__static">static</span>        <span class="phpdocumentor-signature__name">recogerImagenNasa</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$fecha</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/FotoNasa.html"><abbr title="\FotoNasa">FotoNasa</abbr></a>|null</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+        <section class="phpdocumentor-description"><p>Este método realiza una solicitud a la API de la NASA para obtener
+la imagen del día (APOD) junto con su título y explicación en formato JSON.
+Luego, decodifica la respuesta y crea una instancia de la clase FotoNasa
+con los datos obtenidos.</p>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$fecha</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Fecha en formato 'YYYY-MM-DD' para obtener la imagen</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+    
+
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type"><a href="classes/FotoNasa.html"><abbr title="\FotoNasa">FotoNasa</abbr></a>|null</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Un objeto FotoNasa con los datos de la imagen, o null si la api no devuelve la imagen</p>
+</section>
+
+            </section>
+
+</article>
+            </section>
+
         <div class="phpdocumentor-modal" id="source-view">
     <div class="phpdocumentor-modal-bg" data-exit-button></div>
     <div class="phpdocumentor-modal-container">
         <div class="phpdocumentor-modal-content">
-            <pre style="max-height: 500px; overflow-y: scroll" data-src="files/config/confDBPDO.php.txt" class="language-php line-numbers linkable-line-numbers"></pre>
+            <pre style="max-height: 500px; overflow-y: scroll" data-src="files/model/REST.php.txt" class="language-php line-numbers linkable-line-numbers"></pre>
         </div>
         <button data-exit-button class="phpdocumentor-modal__close">&times;</button>
     </div>
@@ -339,7 +378,7 @@
     </article>
                                 </section>
                 <section class="phpdocumentor-on-this-page__sidebar">
-                            
+                                
     <section class="phpdocumentor-on-this-page__content">
         <strong class="phpdocumentor-on-this-page__title">On this page</strong>
 
@@ -347,19 +386,24 @@
             <li class="phpdocumentor-on-this-page-section__title">Table Of Contents</li>
             <li>
                 <ul class="phpdocumentor-list -clean">
-                                                                                                                                                                    <li><a href="files/config-confdbpdo.html#toc-constants">Constants</a></li>
-                                                        </ul>
+                                        <li><a href="classes/REST.html#toc-constants">Constants</a></li>
+                                                                                <li><a href="classes/REST.html#toc-methods">Methods</a></li>
+                                    </ul>
             </li>
-
                             <li class="phpdocumentor-on-this-page-section__title">Constants</li>
                 <li>
                     <ul class="phpdocumentor-list -clean">
-                                                    <li class=""><a href="namespaces/default.html#constant_CONEXION">CONEXION</a></li>
-                                                    <li class=""><a href="namespaces/default.html#constant_CONTRASE%C3%91A">CONTRASEÑA</a></li>
-                                                    <li class=""><a href="namespaces/default.html#constant_USUARIO">USUARIO</a></li>
+                                                    <li class=""><a href="classes/REST.html#constant_claveApiNasa">claveApiNasa</a></li>
                                             </ul>
                 </li>
             
+            
+                        <li class="phpdocumentor-on-this-page-section__title">Methods</li>
+            <li>
+                <ul class="phpdocumentor-list -clean">
+                                            <li class=""><a href="classes/REST.html#method_recogerImagenNasa">recogerImagenNasa()</a></li>
+                                    </ul>
+            </li>
                     </ul>
     </section>
 
@@ -377,7 +421,7 @@
     </section>
 </section>
         </div>
-        <a href="files/config-confdbpdo.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+        <a href="classes/REST.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
 
     </main>
 

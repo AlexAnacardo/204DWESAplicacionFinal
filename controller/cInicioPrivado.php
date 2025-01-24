@@ -37,7 +37,7 @@
     
     //Si pulsamos "rest" guardamos la pagina actual en la sesion como "paginaAnterior" y redirigimos a la pagina "rest"
     if(isset($_REQUEST['rest'])){
-        $_SESSION['paginaEnCurso'] = 'wip';
+        $_SESSION['paginaEnCurso'] = 'rest';
         $_SESSION['paginaAnterior'] = 'inicioPrivado';
         header('Location: indexLoginLogoffTema6.php');
         exit();

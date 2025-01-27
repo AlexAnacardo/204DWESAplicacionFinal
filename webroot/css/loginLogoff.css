@@ -564,3 +564,41 @@ header form{
         }
     }
 }
+
+#headerMantenimientoDepartamentos{
+    p{color:white;} 
+    h1{
+        font-size: 370%;
+        margin-left: 20%;
+    }
+    form{
+        margin-left: -5%;
+        display: flex;
+        justify-content: space-around;
+    }
+    #zonaUsuario{
+        width: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+#mantenimientoDepartamentos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    table, td, th, tr{
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 10px 50px;
+    }
+    
+    table{        
+        td{text-align: center;}
+        td:nth-of-type(2){text-align: left;}
+        td:nth-of-type(4){text-align: right;}
+    }
+}

@@ -15,7 +15,8 @@ $controller=[
     'detalle' => 'controller/cDetalle.php',
     'error' => 'controller/cError.php',
     'wip' => 'controller/cWip.php',
-    'rest' => 'controller/cRest.php'
+    'rest' => 'controller/cRest.php',
+    'mantenimientoDepartamentos' => 'controller/cMantenimientoDepartamentos.php'
 ];
         
 $view=[
@@ -26,6 +27,7 @@ $view=[
     'detalle' => 'view/vDetalle.php',
     'error' => 'view/vError.php',
     'wip' => 'view/vWip.php',
-    'rest' => 'view/vRest.php' 
+    'rest' => 'view/vRest.php',
+    'mantenimientoDepartamentos' => 'view/vMantenimientoDepartamentos.php'
 ];
 

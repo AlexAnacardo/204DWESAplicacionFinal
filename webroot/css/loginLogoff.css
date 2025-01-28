@@ -552,6 +552,7 @@ header form{
         width: 33%;
         height: 100%;
         display: flex;
+        flex-wrap: wrap;
         flex-direction: column;
         justify-content: space-around;
         align-items: center;      
@@ -561,6 +562,14 @@ header form{
         }
         img{            
             height: 30%; width: 30%; 
+        }       
+    }
+    
+    .cajaRest:nth-of-type(2){
+        form{
+            display: flex;
+            flex-direction: column;
+            
         }
     }
 }

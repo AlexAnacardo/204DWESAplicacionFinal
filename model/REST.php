@@ -54,16 +54,13 @@ class REST{
         }
     }
     
-    public static function solicitarDivisaFrankfurter($divisa1, $divisa2){
-        try{
-            $arrayRespuestas=[
-                
-            ];
+    public static function solicitarDivisaFrankfurter($divisa1, $divisa2, $cantidad){
+        try{            
             $llamadaApi= file_get_contents('https://api.frankfurter.app/latest?from='.$divisa1.'&to='.$divisa2);
             $jsonDivisa= json_decode($llamadaApi, true);
             
             if(isset($jsonDivisa)){              
-                return $jsonDivisa->rates->EUR;
+                return floatval($jsonDivisa['rates'][$divisa2])*floatval($cantidad);
             }else{
                 return null;
             }

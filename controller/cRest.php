@@ -1,14 +1,20 @@
 <?php
-$arrayVista=[
-    'Nasa' => [
-        'Titulo' => '', 
-        'Explicacion' => '',
-        'UrlFoto' => ''        
-    ],
-    'Frankfurter' => [
-        'Cambio' => '0'
-    ]
-];
+if(!isset($arrayVista)){
+    $arrayVista=[
+        'Nasa' => [
+            'Titulo' => '', 
+            'Explicacion' => '',
+            'UrlFoto' => ''        
+        ],
+        'Frankfurter' => [
+            'Cambio' => '1',
+            'DivisaInicio' => 'EUR',
+            'DivisaDestino' => '',
+            'CantidadInicio' => null
+        ]
+    ];
+}
+
 //Si se pulsa volver, guardamos la pagina actual en la sesion como "paginaAnterior" y redirigimos a la ventana "login"
 if(isset($_REQUEST['volver'])){
     $_SESSION['paginaEnCurso'] = 'inicioPrivado';
@@ -56,7 +62,12 @@ else{
 }
 
 if(isset($_REQUEST['solicitarDivisa'])){
-    $arrayVista['Frankfurter']['Cambio']=REST::solicitarDivisaFrankfurter($_REQUEST['divisa1'], $_REQUEST['divisa2']);
+    if($_REQUEST['divisa1']!=$_REQUEST['divisa2']){
+        $_SESSION['CambioDivisa']=REST::solicitarDivisaFrankfurter($_REQUEST['divisa1'], $_REQUEST['divisa2'], $_REQUEST['cantidad1']);
+        $_SESSION['DivisaInicio']= $_REQUEST['divisa1'];
+        $_SESSION['DivisaDestino']= $_REQUEST['divisa2'];
+        $_SESSION['CantidadInicio']= $_REQUEST['cantidad1'];
+    }  
 }
 
 //Cargamos la vista

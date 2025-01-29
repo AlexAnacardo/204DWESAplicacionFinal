@@ -15,6 +15,14 @@ if(!isset($arrayVista)){
     ];
 }
 
+//Como estas 4 variabes siempre trabajan juntas, solo incluyo una de ellas en el comprobante del if porque si una no esta inicializada, las otras no lo  estaran
+if(!isset($_SESSION['CambioDivisa'])){
+    $_SESSION['CambioDivisa']=0;
+    $_SESSION['DivisaInicio']= 0;
+    $_SESSION['DivisaDestino']= "EUR";
+    $_SESSION['CantidadInicio']= "EUR";
+}
+
 //Si se pulsa volver, guardamos la pagina actual en la sesion como "paginaAnterior" y redirigimos a la ventana "login"
 if(isset($_REQUEST['volver'])){
     $_SESSION['paginaEnCurso'] = 'inicioPrivado';

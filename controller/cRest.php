@@ -37,7 +37,7 @@ if(!isset($_SESSION['fechaFotoNasaSolicitada'])){
 }
 
 //Si el usuario ha solicitado una fecha en concreto, esta se carga en la variable de sesion
-if(isset($_REQUEST['solicitarFotoNasa'])){
+if(isset($_REQUEST['solicitarFotoNasa']) && validacionFormularios::validarFecha($_REQUEST['solicitarFotoNasa'], "20/06/1995", strval(date_format(new DateTime("now"), "d/m/Y")))==null){
     $fecha= $_REQUEST['fecha'];
     $_SESSION['fechaFotoNasaSolicitada']= $_REQUEST['fecha'];
 }

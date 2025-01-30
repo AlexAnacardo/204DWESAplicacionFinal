@@ -17,21 +17,36 @@ if(isset($_REQUEST['perfilUser'])){
         exit();
 }
 
-function cargarTabla(){
+
+if(isset($_REQUEST['descripcion'])){
+    if($_REQUEST['descripcion']==''){
+        $_SESSION['descripcionDepartamentoEnCurso']=null;
+    }
+    else{
+        $_SESSION['descripcionDepartamentoEnCurso']=$_REQUEST['descripcion'];
+    }
+}
+
+
+function cargarTabla($descripcion=null){
     //Lanzamos un query de consulta y lo guardamos en una variable
+    if($descripcion !== null && validacionFormularios::comprobarAlfabetico($descripcion)==null){
+        $aDepartamentos= DepartamentoPDO::BuscarDepartamentoPorDescripcion($descripcion);
+    }else{
+        $aDepartamentos= DepartamentoPDO::ListarDepartamentos();
+    }
     
-    $resultadoConsulta= DBPDO::ejecutaConsulta('select * from T02_Departamento');
 
     //Asignamos a la variable oDepartamento el 1er objeto de las respuestas recibidas del query, mientras el objeto contenga valores, se ejecutara el bucle                
-    while ($oDepartamento = $resultadoConsulta->fetchObject()) {    
+    foreach ($aDepartamentos as $oDepartamento) {    
         echo("<tr>");
         
-        $oFechaBaja = $oDepartamento->T02_FechaBajaDepartamento;
-        $sVolumen = strval($oDepartamento->T02_VolumenDeNegocio);
+        $oFechaBaja = $oDepartamento->getBaja();
+        $sVolumen = strval($oDepartamento->getVolumen());
 
-        echo "<td>" . $oDepartamento->T02_CodDepartamento . "</td>";
-        echo "<td>" . $oDepartamento->T02_DescDepartamento . "</td>";
-        echo "<td>" . date_format(new DateTime($oDepartamento->T02_FechaCreacionDepartamento), "d/m/Y") . "</td>";
+        echo "<td>" . $oDepartamento->getCodDepartamento() . "</td>";
+        echo "<td>" . $oDepartamento->getDescripcion() . "</td>";
+        echo "<td>" . date_format(new DateTime($oDepartamento->getAlta()), "d/m/Y") . "</td>";
         echo "<td>" . str_replace(".", ",", $sVolumen) . "€</td>";
         echo is_null($oFechaBaja) ? '<td></td>' : "<td>" . date_format(new DateTime($oFechaBaja), "d/m/Y") . "</td>";
         

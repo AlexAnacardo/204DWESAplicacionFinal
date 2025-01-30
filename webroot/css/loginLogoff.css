@@ -595,9 +595,41 @@ header form{
 
 #mantenimientoDepartamentos{
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;    
     align-items: center;
+    
+    form{
+        margin-top: 7%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 15%;
+        
+        #divDescripcion{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            textarea{
+                width: 50%;
+            }
+        }
+        #divEnviar{
+            
+            display: flex;
+            justify-content: center;
+            input{
+                background-color: #FFD814;
+                border: none;
+                border-radius: 7px;
+                padding: 30% 70%;
+            }
+            input:hover{
+                background-color: #F7CA00;
+            }
+
+        }
+    }
     
     table, td, th, tr{
         border: 1px solid black;
@@ -605,7 +637,8 @@ header form{
         padding: 10px 50px;
     }
     
-    table{        
+    table{
+        margin-top: 5%;
         td{text-align: center;}
         td:nth-of-type(2){text-align: left;}
         td:nth-of-type(4){text-align: right;}

@@ -96,6 +96,6 @@ class UsuarioPDO implements UsuarioDB {
     
     public static function validarCodNoExiste() {
         
-    }
+    }   
 }
 ?>

@@ -321,12 +321,14 @@ header form{
 
 #programa{
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    margin: 1% auto;       
-    height: 110%;      
-    align-items: center;    
+    
+    margin: 0 auto;       
+    height: 110%;              
     border-radius: 9%;    
-    width: 100%;      
+    width: 100%;
+    
 }
 
 #programa p{
@@ -341,12 +343,13 @@ header form{
 
 #programa div{
     width: 100%;
-    margin-top: -20%;
+    margin-top: 4%;
+    
 }
 
 #programa form{       
     margin: 0 auto;
-    margin-top: -10%;
+    margin-top: 4%;
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -361,6 +364,28 @@ header form{
         background-color: #F7CA00;
     }
 }
+
+#zonaImagenNasaJs{
+    position: absolute;
+    bottom: 11%;
+    height: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%; width: 17%;
+        img{            
+            margin-top: -8%;
+            max-height: 85%;
+            max-width: 100%;
+        }
+    }
+}
+
+
 
 /*------Detalle------*/
 

@@ -4,7 +4,7 @@
 </header>
 <main id="wip">
     <p>Este apartado no se encuentra disponible actualmente, pruebe a volver mas tarde</p>    
-    <form>
+    <form method="post">
         <input type="submit" id="volver" name="volver" value="Volver">
     </form>
 </main>

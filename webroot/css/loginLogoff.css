@@ -321,12 +321,14 @@ header form{
 
 #programa{
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    margin: 1% auto;       
-    height: 110%;      
-    align-items: center;    
+    
+    margin: 0 auto;       
+    height: 110%;              
     border-radius: 9%;    
-    width: 100%;      
+    width: 100%;
+    
 }
 
 #programa p{
@@ -341,12 +343,13 @@ header form{
 
 #programa div{
     width: 100%;
-    margin-top: -20%;
+    margin-top: 4%;
+    
 }
 
 #programa form{       
     margin: 0 auto;
-    margin-top: -10%;
+    margin-top: 4%;
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -361,6 +364,28 @@ header form{
         background-color: #F7CA00;
     }
 }
+
+#zonaImagenNasaJs{
+    position: absolute;
+    bottom: 11%;
+    height: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%; width: 17%;
+        img{            
+            margin-top: -8%;
+            max-height: 85%;
+            max-width: 100%;
+        }
+    }
+}
+
+
 
 /*------Detalle------*/
 
@@ -552,6 +577,7 @@ header form{
         width: 33%;
         height: 100%;
         display: flex;
+        flex-wrap: wrap;
         flex-direction: column;
         justify-content: space-around;
         align-items: center;      
@@ -561,6 +587,85 @@ header form{
         }
         img{            
             height: 30%; width: 30%; 
+        }       
+    }
+    
+    .cajaRest:nth-of-type(2){
+        form{
+            display: flex;
+            flex-direction: column;
+            height: 75%;
         }
+    }
+}
+
+#headerMantenimientoDepartamentos{
+    p{color:white;} 
+    h1{
+        font-size: 370%;
+        margin-left: 20%;
+    }
+    form{
+        margin-left: -5%;
+        display: flex;
+        justify-content: space-around;
+    }
+    #zonaUsuario{
+        width: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+#mantenimientoDepartamentos{
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+    
+    form{
+        margin-top: 7%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 15%;
+        
+        #divDescripcion{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            textarea{
+                width: 50%;
+            }
+        }
+        #divEnviar{
+            
+            display: flex;
+            justify-content: center;
+            input{
+                background-color: #FFD814;
+                border: none;
+                border-radius: 7px;
+                padding: 30% 70%;
+            }
+            input:hover{
+                background-color: #F7CA00;
+            }
+
+        }
+    }
+    
+    table, td, th, tr{
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 10px 50px;
+    }
+    
+    table{
+        margin-top: 5%;
+        td{text-align: center;}
+        td:nth-of-type(2){text-align: left;}
+        td:nth-of-type(4){text-align: right;}
     }
 }

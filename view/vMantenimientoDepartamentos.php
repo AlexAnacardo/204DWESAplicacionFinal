@@ -17,7 +17,7 @@
             <?php } ?>
         </div>                                
         <div id="divEnviar">
-            <input type="submit" name="enviar" id="enviar" value="Enviar">
+            <input type="submit" name="enviar" id="enviar" value="Buscar">
         </div>                                
     </form>
     <table>

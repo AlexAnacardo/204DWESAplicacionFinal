@@ -4,7 +4,7 @@ $oUsuarioEnCurso=$_SESSION["usuarioDAW204LoginLogoffTema6"];
 
 if(isset($_REQUEST['volver'])){
     $_SESSION['paginaEnCurso'] = 'inicioPrivado';
-    $_SESSION['paginaAnterior'] = 'detalle';
+    $_SESSION['paginaAnterior'] = 'mantenimientoDepartamentos';
     header('Location: indexLoginLogoffTema6.php');
     exit();             
 }
@@ -18,6 +18,7 @@ if(isset($_REQUEST['perfilUser'])){
 }
 
 
+//Si el campo de texto "Descripcion" ha sido inicializado, se comprueba si contiene texto, si no lo tiene se inicializa a null, y si lo tiene, se carga su valor en la variable de sesion descripcionDepartamentoEnCurso
 if(isset($_REQUEST['descripcion'])){
     if($_REQUEST['descripcion']==''){
         $_SESSION['descripcionDepartamentoEnCurso']=null;
@@ -27,6 +28,12 @@ if(isset($_REQUEST['descripcion'])){
     }
 }
 
+if(isset($_REQUEST['añadir'])){
+    $_SESSION['paginaEnCurso'] = 'añadirDepartamento';
+    $_SESSION['paginaAnterior'] = 'mantenimientoDepartamentos';
+    header('Location: indexLoginLogoffTema6.php');
+    exit();
+}
 
 function cargarTabla($descripcion=null){
     //Lanzamos un query de consulta y lo guardamos en una variable
@@ -53,6 +60,7 @@ function cargarTabla($descripcion=null){
         echo("</tr>");        
     }
 }
+
 
 
 //Cargamos el layout

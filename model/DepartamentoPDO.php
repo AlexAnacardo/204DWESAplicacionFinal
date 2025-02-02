@@ -37,5 +37,9 @@ class DepartamentoPDO implements DepartamentoBD{
         
         return $aDepartamentos;
     }
+    
+    public static function AñadirDepartamento($codigo, $descripcion, $volumen){
+        $sql = DBPDO::ejecutaConsulta('insert into T02_Departamento values("'.$codigo.'","'.$descripcion.'", now(),"'.$volumen.'", null)');
+    }
 }
 ?>

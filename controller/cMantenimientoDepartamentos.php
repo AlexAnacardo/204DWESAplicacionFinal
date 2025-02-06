@@ -35,6 +35,22 @@ if(isset($_REQUEST['añadir'])){
     exit();
 }
 
+if(isset($_REQUEST['editarDepartamento'])){
+    $_SESSION['descripcionDepartamentoEnCurso']=$_REQUEST['editarDepartamento'];
+    $_SESSION['paginaEnCurso'] = 'editarDepartamento';
+    $_SESSION['paginaAnterior'] = 'mantenimientoDepartamentos';
+    header('Location: indexLoginLogoffTema6.php');
+    exit();
+}
+
+if(isset($_REQUEST['borrarDepartamento'])){
+    $_SESSION['descripcionDepartamentoEnCurso']=$_REQUEST['borrarDepartamento'];
+    $_SESSION['paginaEnCurso'] = 'borrarDepartamento';
+    $_SESSION['paginaAnterior'] = 'mantenimientoDepartamentos';
+    header('Location: indexLoginLogoffTema6.php');
+    exit();
+}
+
 function cargarTabla($descripcion=null){
     //Lanzamos un query de consulta y lo guardamos en una variable
     if($descripcion !== null && validacionFormularios::comprobarAlfabetico($descripcion)==null){
@@ -56,7 +72,8 @@ function cargarTabla($descripcion=null){
         echo "<td>" . date_format(new DateTime($oDepartamento->getAlta()), "d/m/Y") . "</td>";
         echo "<td>" . str_replace(".", ",", $sVolumen) . "€</td>";
         echo is_null($oFechaBaja) ? '<td></td>' : "<td>" . date_format(new DateTime($oFechaBaja), "d/m/Y") . "</td>";
-        
+        echo '<td><form method="post"><input type="submit" class="borrarDepartamento" name="borrarDepartamento" value="'. $oDepartamento->getCodDepartamento() .'"></input></form></td>';
+        echo '<td><form method="post"><input type="submit" class="editarDepartamento" name="editarDepartamento" value="'. $oDepartamento->getCodDepartamento() .'"></input></form></td>';
         echo("</tr>");        
     }
 }

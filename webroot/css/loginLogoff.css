@@ -731,3 +731,51 @@ header form{
         }
     }
 }
+
+#editarDepartamento{
+    #aceptarEditar{
+        background-color: #FFD814;
+        border: none;
+        border-radius: 7px;
+        padding: 3% 6%;
+    }
+    #aceptarEditar:hover{
+        background-color: #F7CA00;
+    }
+    #cancelarEditar{
+        background-color: red;
+        color: white;
+        border: none;
+        border-radius: 7px;
+        padding: 3% 6%;
+    }
+    #cancelarEditar:hover{
+        background-color:  #af0c0c ;
+    }
+}
+
+.borrarDepartamento{
+    border: none;
+    height: 40px;
+    width: 40px;
+    background: none;
+    color: transparent;
+    background-image: url(../images/borrar.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.editarDepartamento{    
+    border: none;
+    height: 40px;
+    width: 40px;
+    background: none;
+    color: transparent;
+    background-image: url(../images/editar.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.borrarDepartamento:hover, .editarDepartamento:hover{
+    cursor: pointer;
+}

@@ -2,6 +2,8 @@
 //Guardamos el usuario que ha hecho login en una variable
 $oUsuarioEnCurso=$_SESSION["usuarioDAW204LoginLogoffTema6"];
 
+
+
 if(isset($_REQUEST['volver'])){
     $_SESSION['paginaEnCurso'] = 'inicioPrivado';
     $_SESSION['paginaAnterior'] = 'mantenimientoDepartamentos';
@@ -21,10 +23,10 @@ if(isset($_REQUEST['perfilUser'])){
 //Si el campo de texto "Descripcion" ha sido inicializado, se comprueba si contiene texto, si no lo tiene se inicializa a null, y si lo tiene, se carga su valor en la variable de sesion descripcionDepartamentoEnCurso
 if(isset($_REQUEST['descripcion'])){
     if($_REQUEST['descripcion']==''){
-        $_SESSION['descripcionDepartamentoEnCurso']=null;
+        $_SESSION['descripcionDepartamentoSolicitada']=null;
     }
     else{
-        $_SESSION['descripcionDepartamentoEnCurso']=$_REQUEST['descripcion'];
+        $_SESSION['descripcionDepartamentoSolicitada']=$_REQUEST['descripcion'];
     }
 }
 
@@ -36,8 +38,19 @@ if(isset($_REQUEST['añadir'])){
 }
 
 if(isset($_REQUEST['editarDepartamento'])){
+    if(isset($_REQUEST['descripcion'])){
+        $_SESSION['descripcionDepartamentoSolicitada']=$_REQUEST['descripcion'];
+    }
     $_SESSION['descripcionDepartamentoEnCurso']=$_REQUEST['editarDepartamento'];
     $_SESSION['paginaEnCurso'] = 'editarDepartamento';
+    $_SESSION['paginaAnterior'] = 'mantenimientoDepartamentos';
+    header('Location: indexLoginLogoffTema6.php');
+    exit();
+}
+
+if(isset($_REQUEST['mostrarDepartamento'])){
+    $_SESSION['descripcionDepartamentoEnCurso']=$_REQUEST['mostrarDepartamento'];
+    $_SESSION['paginaEnCurso'] = 'mostrarDepartamento';
     $_SESSION['paginaAnterior'] = 'mantenimientoDepartamentos';
     header('Location: indexLoginLogoffTema6.php');
     exit();
@@ -74,6 +87,7 @@ function cargarTabla($descripcion=null){
         echo is_null($oFechaBaja) ? '<td></td>' : "<td>" . date_format(new DateTime($oFechaBaja), "d/m/Y") . "</td>";
         echo '<td><form method="post"><input type="submit" class="borrarDepartamento" name="borrarDepartamento" value="'. $oDepartamento->getCodDepartamento() .'"></input></form></td>';
         echo '<td><form method="post"><input type="submit" class="editarDepartamento" name="editarDepartamento" value="'. $oDepartamento->getCodDepartamento() .'"></input></form></td>';
+        echo '<td><form method="post"><input type="submit" class="mostrarDepartamento" name="mostrarDepartamento" value="'. $oDepartamento->getCodDepartamento() .'"></input></form></td>';
         echo("</tr>");        
     }
 }

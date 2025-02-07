@@ -624,12 +624,12 @@ header form{
     align-items: center;
     
     form{
-        margin-top: 3%;
+        margin-top: 0.3%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        height: 5%;
+        height: 5%;               
         
         #divDescripcion{
             display: flex;
@@ -664,6 +664,15 @@ header form{
         }
     }
     
+    #busquedaDepartamento{
+        margin-top: 0.5%;
+        height: 15%;
+    }
+    
+    #formAñadirDepartamento{
+        margin-top: 0;
+    }
+    
     table, td, th, tr{
         border: 1px solid black;
         border-collapse: collapse;
@@ -671,14 +680,14 @@ header form{
     }
     
     table{
-        margin-top: 5%;
+        margin-top: 0.5%;
         td{text-align: center;}
         td:nth-of-type(2){text-align: left;}
         td:nth-of-type(4){text-align: right;}
     }
 }
 
-#headerañadirDepartamento{
+#headerAñadirDepartamento{
     p{color: white;}
     h1{
         font-size: 370%;
@@ -732,12 +741,31 @@ header form{
     }
 }
 
-#editarDepartamento{
+#headerMostrarEditarDepartamento{
+    p{color: white;}
+    h1{
+        font-size: 370%;
+        margin-left: 20%;
+    }
+    form{
+        margin-left: -5%;
+        display: flex;
+        justify-content: space-around;
+    }
+    #zonaUsuario{
+        width: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+#mostrarEditarDepartamento{
     #aceptarEditar{
         background-color: #FFD814;
         border: none;
         border-radius: 7px;
-        padding: 3% 6%;
+        padding: 1% 2%;
     }
     #aceptarEditar:hover{
         background-color: #F7CA00;
@@ -747,10 +775,55 @@ header form{
         color: white;
         border: none;
         border-radius: 7px;
-        padding: 3% 6%;
+        padding: 1% 2%;
     }
     #cancelarEditar:hover{
         background-color:  #af0c0c ;
+    }
+    #aceptarMostrar{
+        background-color: #FFD814;
+        border: none;
+        border-radius: 7px;
+        padding: 1% 2%;
+    }
+    #aceptarMostrar:hover{
+        background-color: #F7CA00;
+    }
+    display: flex;
+    justify-content: center;
+    form{
+        height: 90%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        
+        div{
+            width: 100%;
+            font-size: 200%;
+            display: flex;
+            align-items: center;  
+            
+            label{
+                margin-left: 30%;
+            }
+            input{
+                margin-left: 5%;
+                height: 100%;
+            }
+            p{
+                margin-left: 4%;
+            }
+        }
+        div:nth-of-type(6){         
+            input{
+               margin-left: 0; 
+            }
+            width: 20%;
+            height: 6%;
+            justify-content: space-around;
+        }
     }
 }
 
@@ -776,6 +849,18 @@ header form{
     background-position: center;
 }
 
-.borrarDepartamento:hover, .editarDepartamento:hover{
+.mostrarDepartamento{
+    border: none;
+    height: 32px;
+    width: 60px;
+    background: none;
+    color: transparent;
+    background-image: url(../images/ojo.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.borrarDepartamento:hover, .editarDepartamento:hover, .mostrarDepartamento:hover{
     cursor: pointer;
 }
+

@@ -1,6 +1,4 @@
 <?php
-    define('TamañoMaximoCadena', 1000);
-    define('TamañoMinimoCadena', 1);
     define('MAX_CADENA', 3);
     define('MIN_CADENA', 1);
     define('MIN_VOLUMEN', 0);
@@ -47,6 +45,7 @@ $oUsuarioEnCurso=$_SESSION["usuarioDAW204LoginLogoffTema6"];
     if ($entradaOK) {        
 
         DepartamentoPDO::AñadirDepartamento($_REQUEST['codigo'], $_REQUEST['descripcion'], $_REQUEST['volumen']);
+        $_SESSION['descripcionDepartamentoSolicitada']=$_REQUEST['descripcion'];
         $_SESSION['paginaEnCurso'] = 'mantenimientoDepartamentos';
         $_SESSION['paginaAnterior'] = 'añadirDepartamento';
         header('Location: indexLoginLogoffTema6.php');

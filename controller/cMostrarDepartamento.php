@@ -16,7 +16,7 @@ if(isset($_REQUEST['aceptarMostrar'])){
     $_SESSION['descripcionDepartamentoEnCurso']='';
     $_SESSION['paginaEnCurso'] = 'mantenimientoDepartamentos';
     $_SESSION['paginaAnterior'] = 'editarDepartamento';
-    header('Location: indexLoginLogoffTema6.php');
+    header('Location: index.php');
     exit();             
 }
 

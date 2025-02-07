@@ -27,7 +27,7 @@ if(!isset($_SESSION['CambioDivisa'])){
 if(isset($_REQUEST['volver'])){
     $_SESSION['paginaEnCurso'] = 'inicioPrivado';
     $_SESSION['paginaAnterior'] = 'detalle';
-    header('Location: indexLoginLogoffTema6.php');
+    header('Location: index.php');
     exit();             
 }
 
@@ -60,7 +60,7 @@ if(!$oImagenNasa instanceof FotoNasa){
     $_SESSION['paginaEnCurso'] = 'error';
     unset($_SESSION['fechaFotoNasaSolicitada']);
     // Redirigir al usuario a la página de error
-    header('Location: indexLoginLogoffTema6.php');
+    header('Location: index.php');
     exit();
 }
 else{

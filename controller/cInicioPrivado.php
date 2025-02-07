@@ -9,7 +9,7 @@
     //Si ya hay un usuario cargado en la sesion, pasamos a el inicio privado directamente
     if(!isset($_SESSION["usuarioDAW204LoginLogoffTema6"])){
         $_SESSION['paginaEnCurso'] = 'login';
-        header('Location: indexLoginLogoffTema6.php');
+        header('Location: index.php');
         exit(); 
     }
     
@@ -17,7 +17,7 @@
     if(isset($_REQUEST['detalle'])){
         $_SESSION['paginaEnCurso'] = 'detalle';
         $_SESSION['paginaAnterior'] = 'inicioPrivado';
-        header('Location: indexLoginLogoffTema6.php');
+        header('Location: index.php');
         exit(); 
     }
     
@@ -32,7 +32,7 @@
         unset($_SESSION['descripcionDepartamentoEnCurso']);
         $_SESSION['paginaEnCurso'] = 'mantenimientoDepartamentos';
         $_SESSION['paginaAnterior'] = 'inicioPrivado';
-        header('Location: indexLoginLogoffTema6.php');
+        header('Location: index.php');
         exit();
     }
     
@@ -40,7 +40,7 @@
     if(isset($_REQUEST['rest'])){
         $_SESSION['paginaEnCurso'] = 'rest';
         $_SESSION['paginaAnterior'] = 'inicioPrivado';
-        header('Location: indexLoginLogoffTema6.php');
+        header('Location: index.php');
         exit();
     }
     
@@ -48,14 +48,14 @@
     if(isset($_REQUEST['perfilUser'])){
         $_SESSION['paginaEnCurso'] = 'wip';
         $_SESSION['paginaAnterior'] = 'inicioPrivado';
-        header('Location: indexLoginLogoffTema6.php');
+        header('Location: index.php');
         exit();
     }
     
     //Si pulsamos "cerrar sesion" destruimos la sesion y redirigimos a la pagina "inicio publico"
     if(isset($_REQUEST['logoff'])){
        session_destroy();       
-       header('location: indexLoginLogoffTema6.php');       
+       header('location: index.php');       
        exit;
     }
 

@@ -10,7 +10,7 @@ $oUsuarioEnCurso=$_SESSION["usuarioDAW204LoginLogoffTema6"];
     if(isset($_REQUEST['volver'])){
         $_SESSION['paginaEnCurso'] = 'mantenimientoDepartamentos';
         $_SESSION['paginaAnterior'] = 'añadirDepartamento';
-        header('Location: indexLoginLogoffTema6.php');
+        header('Location: index.php');
         exit();             
     }
 
@@ -48,7 +48,7 @@ $oUsuarioEnCurso=$_SESSION["usuarioDAW204LoginLogoffTema6"];
         $_SESSION['descripcionDepartamentoSolicitada']=$_REQUEST['descripcion'];
         $_SESSION['paginaEnCurso'] = 'mantenimientoDepartamentos';
         $_SESSION['paginaAnterior'] = 'añadirDepartamento';
-        header('Location: indexLoginLogoffTema6.php');
+        header('Location: index.php');
         exit();
     }
 

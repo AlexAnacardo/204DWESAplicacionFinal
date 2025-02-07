@@ -7,7 +7,7 @@ $oUsuarioEnCurso=$_SESSION["usuarioDAW204LoginLogoffTema6"];
 if(isset($_REQUEST['volver'])){
     $_SESSION['paginaEnCurso'] = 'inicioPrivado';
     $_SESSION['paginaAnterior'] = 'mantenimientoDepartamentos';
-    header('Location: indexLoginLogoffTema6.php');
+    header('Location: index.php');
     exit();             
 }
 
@@ -15,7 +15,7 @@ if(isset($_REQUEST['volver'])){
 if(isset($_REQUEST['perfilUser'])){
         $_SESSION['paginaEnCurso'] = 'wip';
         $_SESSION['paginaAnterior'] = 'mantenimientoDepartamentos';
-        header('Location: indexLoginLogoffTema6.php');
+        header('Location: index.php');
         exit();
 }
 
@@ -33,7 +33,7 @@ if(isset($_REQUEST['descripcion'])){
 if(isset($_REQUEST['añadir'])){
     $_SESSION['paginaEnCurso'] = 'añadirDepartamento';
     $_SESSION['paginaAnterior'] = 'mantenimientoDepartamentos';
-    header('Location: indexLoginLogoffTema6.php');
+    header('Location: index.php');
     exit();
 }
 
@@ -44,7 +44,7 @@ if(isset($_REQUEST['editarDepartamento'])){
     $_SESSION['descripcionDepartamentoEnCurso']=$_REQUEST['editarDepartamento'];
     $_SESSION['paginaEnCurso'] = 'editarDepartamento';
     $_SESSION['paginaAnterior'] = 'mantenimientoDepartamentos';
-    header('Location: indexLoginLogoffTema6.php');
+    header('Location: index.php');
     exit();
 }
 
@@ -52,7 +52,7 @@ if(isset($_REQUEST['mostrarDepartamento'])){
     $_SESSION['descripcionDepartamentoEnCurso']=$_REQUEST['mostrarDepartamento'];
     $_SESSION['paginaEnCurso'] = 'mostrarDepartamento';
     $_SESSION['paginaAnterior'] = 'mantenimientoDepartamentos';
-    header('Location: indexLoginLogoffTema6.php');
+    header('Location: index.php');
     exit();
 }
 
@@ -60,7 +60,7 @@ if(isset($_REQUEST['borrarDepartamento'])){
     $_SESSION['descripcionDepartamentoEnCurso']=$_REQUEST['borrarDepartamento'];
     $_SESSION['paginaEnCurso'] = 'borrarDepartamento';
     $_SESSION['paginaAnterior'] = 'mantenimientoDepartamentos';
-    header('Location: indexLoginLogoffTema6.php');
+    header('Location: index.php');
     exit();
 }
 

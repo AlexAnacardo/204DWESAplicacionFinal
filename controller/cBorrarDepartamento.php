@@ -5,7 +5,7 @@ if(isset($_REQUEST['cancelarBorrar'])){
     $_SESSION['descripcionDepartamentoEnCurso']='';
     $_SESSION['paginaEnCurso'] = 'mantenimientoDepartamentos';
     $_SESSION['paginaAnterior'] = 'borrarDepartamento';
-    header('Location: indexLoginLogoffTema6.php');
+    header('Location: index.php');
     exit();   
 }
 

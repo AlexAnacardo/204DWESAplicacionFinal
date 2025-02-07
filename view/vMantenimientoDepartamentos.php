@@ -7,14 +7,10 @@
     </form>
 </header>  
 <main id="mantenimientoDepartamentos"> 
-    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" novalidate>                                                                                                  
+    <form id="busquedaDepartamento" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" novalidate>                                                                                                  
         <div id="divDescripcion">
             <label for="descripcion">Descripcion: </label>
-            <textarea name="descripcion" id="descripcion" rows="2" cols="50" style="resize: none"><?php echo (isset($_REQUEST['descripcion']) ? $_REQUEST['descripcion'] : ''); ?></textarea>
-            <?php if (!empty($aErrores["descripcion"])) { ?>
-                <!--Si hay algun error almacenado en el array, el mensaje del mismo se mostrara, esto para cada caso-->
-                <p style="color: red"><?php echo $aErrores["descripcion"]; ?></p>
-            <?php } ?>
+            <textarea name="descripcion" id="descripcion" rows="2" cols="50" style="resize: none"><?php echo (isset($_SESSION['descripcionDepartamentoSolicitada']) ? $_SESSION['descripcionDepartamentoSolicitada'] : ''); ?></textarea>
         </div>                                
         <div id="divEnviar">
             <input type="submit" name="buscar" id="buscar" value="Buscar">
@@ -31,15 +27,15 @@
             </tr>
         </thead>
         <?php
-            if(isset($_SESSION['descripcionDepartamentoEnCurso'])){
-                cargarTabla($_SESSION['descripcionDepartamentoEnCurso']);
+            if(isset($_SESSION['descripcionDepartamentoSolicitada'])){
+                cargarTabla($_SESSION['descripcionDepartamentoSolicitada']);
             }
             else{
                 cargarTabla();
             }
         ?>        
     </table> 
-    <form>
+    <form id="formAñadirDeaprtamento">
         <input type="submit" name="añadir" id="añadir" value="Añadir departamento"/>
     </form>
 </main>

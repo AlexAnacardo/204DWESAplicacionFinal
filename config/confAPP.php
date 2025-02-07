@@ -22,7 +22,8 @@ $controller=[
     'mantenimientoDepartamentos' => 'controller/cMantenimientoDepartamentos.php',
     'añadirDepartamento' => 'controller/cAñadirDepartamento.php',
     'borrarDepartamento' => 'controller/cBorrarDepartamento.php',
-    'editarDepartamento' => 'controller/cEditarDepartamento.php'
+    'editarDepartamento' => 'controller/cEditarDepartamento.php',
+    'mostrarDepartamento' => 'controller/cMostrarDepartamento.php'
 ];
         
 $view=[
@@ -37,6 +38,7 @@ $view=[
     'mantenimientoDepartamentos' => 'view/vMantenimientoDepartamentos.php',
     'añadirDepartamento' => 'view/vAñadirDepartamento.php',
     'borrarDepartamento' => 'view/vBorrarDepartamento.php',
-    'editarDepartamento' => 'view/vEditarDepartamento.php'
+    'editarDepartamento' => 'view/vEditarDepartamento.php',
+    'mostrarDepartamento' => 'view/vMostrarDepartamento.php'
 ];
 

@@ -17,7 +17,7 @@
             <?php } ?>
         </div>                                
         <div id="divEnviar">
-            <input type="submit" name="enviar" id="enviar" value="Enviar">
+            <input type="submit" name="buscar" id="buscar" value="Buscar">
         </div>                                
     </form>
     <table>
@@ -37,7 +37,9 @@
             else{
                 cargarTabla();
             }
-            
-        ?>
+        ?>        
     </table> 
+    <form>
+        <input type="submit" name="añadir" id="añadir" value="Añadir departamento"/>
+    </form>
 </main>

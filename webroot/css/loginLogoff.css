@@ -624,23 +624,23 @@ header form{
     align-items: center;
     
     form{
-        margin-top: 7%;
+        margin-top: 3%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        height: 15%;
+        height: 5%;
         
         #divDescripcion{
             display: flex;
             justify-content: space-around;
-            align-items: center;
+            align-items: center;            
             textarea{
                 width: 50%;
-            }
+            }            
         }
         #divEnviar{
-            
+            margin-top: 4%;
             display: flex;
             justify-content: center;
             input{
@@ -652,7 +652,15 @@ header form{
             input:hover{
                 background-color: #F7CA00;
             }
-
+        }
+        #añadir{
+            background-color: #FFD814;
+            border: none;
+            border-radius: 7px;
+            padding: 10% 20%;
+        }
+        #añadir:hover{
+            background-color: #F7CA00;
         }
     }
     
@@ -668,4 +676,106 @@ header form{
         td:nth-of-type(2){text-align: left;}
         td:nth-of-type(4){text-align: right;}
     }
+}
+
+#headerañadirDepartamento{
+    p{color: white;}
+    h1{
+        font-size: 370%;
+        margin-left: 20%;
+    }
+    form{
+        margin-left: -5%;
+        display: flex;
+        justify-content: space-around;
+    }
+    #zonaUsuario{
+        width: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+#añadirDepartamento{
+    height: 100%;
+    form{        
+        font-size: 220%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 70%;        
+        div{
+            display: flex;
+            align-items: center;            
+            width: 100%;
+            input, textarea{
+                margin-left: 5%;
+                height: 70%;
+            }           
+        }
+        #divEnviar{            
+            justify-content: center;
+            input{
+                margin-left: 0%;
+                background-color: #FFD814;
+                border: none;
+                border-radius: 7px;
+                padding: 3% 6%;
+                height: auto;
+            }     
+            input:hover{
+                background-color: #F7CA00;
+            }
+        }
+    }
+}
+
+#editarDepartamento{
+    #aceptarEditar{
+        background-color: #FFD814;
+        border: none;
+        border-radius: 7px;
+        padding: 3% 6%;
+    }
+    #aceptarEditar:hover{
+        background-color: #F7CA00;
+    }
+    #cancelarEditar{
+        background-color: red;
+        color: white;
+        border: none;
+        border-radius: 7px;
+        padding: 3% 6%;
+    }
+    #cancelarEditar:hover{
+        background-color:  #af0c0c ;
+    }
+}
+
+.borrarDepartamento{
+    border: none;
+    height: 40px;
+    width: 40px;
+    background: none;
+    color: transparent;
+    background-image: url(../images/borrar.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.editarDepartamento{    
+    border: none;
+    height: 40px;
+    width: 40px;
+    background: none;
+    color: transparent;
+    background-image: url(../images/editar.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.borrarDepartamento:hover, .editarDepartamento:hover{
+    cursor: pointer;
 }

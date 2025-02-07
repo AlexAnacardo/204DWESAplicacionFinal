@@ -19,7 +19,10 @@ $controller=[
     'error' => 'controller/cError.php',
     'wip' => 'controller/cWip.php',
     'rest' => 'controller/cRest.php',
-    'mantenimientoDepartamentos' => 'controller/cMantenimientoDepartamentos.php'
+    'mantenimientoDepartamentos' => 'controller/cMantenimientoDepartamentos.php',
+    'añadirDepartamento' => 'controller/cAñadirDepartamento.php',
+    'borrarDepartamento' => 'controller/cBorrarDepartamento.php',
+    'editarDepartamento' => 'controller/cEditarDepartamento.php'
 ];
         
 $view=[
@@ -31,6 +34,9 @@ $view=[
     'error' => 'view/vError.php',
     'wip' => 'view/vWip.php',
     'rest' => 'view/vRest.php',
-    'mantenimientoDepartamentos' => 'view/vMantenimientoDepartamentos.php'
+    'mantenimientoDepartamentos' => 'view/vMantenimientoDepartamentos.php',
+    'añadirDepartamento' => 'view/vAñadirDepartamento.php',
+    'borrarDepartamento' => 'view/vBorrarDepartamento.php',
+    'editarDepartamento' => 'view/vEditarDepartamento.php'
 ];
 

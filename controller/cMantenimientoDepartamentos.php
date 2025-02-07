@@ -4,7 +4,7 @@ $oUsuarioEnCurso=$_SESSION["usuarioDAW204LoginLogoffTema6"];
 
 if(isset($_REQUEST['volver'])){
     $_SESSION['paginaEnCurso'] = 'inicioPrivado';
-    $_SESSION['paginaAnterior'] = 'detalle';
+    $_SESSION['paginaAnterior'] = 'mantenimientoDepartamentos';
     header('Location: indexLoginLogoffTema6.php');
     exit();             
 }
@@ -18,6 +18,7 @@ if(isset($_REQUEST['perfilUser'])){
 }
 
 
+//Si el campo de texto "Descripcion" ha sido inicializado, se comprueba si contiene texto, si no lo tiene se inicializa a null, y si lo tiene, se carga su valor en la variable de sesion descripcionDepartamentoEnCurso
 if(isset($_REQUEST['descripcion'])){
     if($_REQUEST['descripcion']==''){
         $_SESSION['descripcionDepartamentoEnCurso']=null;
@@ -27,6 +28,28 @@ if(isset($_REQUEST['descripcion'])){
     }
 }
 
+if(isset($_REQUEST['añadir'])){
+    $_SESSION['paginaEnCurso'] = 'añadirDepartamento';
+    $_SESSION['paginaAnterior'] = 'mantenimientoDepartamentos';
+    header('Location: indexLoginLogoffTema6.php');
+    exit();
+}
+
+if(isset($_REQUEST['editarDepartamento'])){
+    $_SESSION['descripcionDepartamentoEnCurso']=$_REQUEST['editarDepartamento'];
+    $_SESSION['paginaEnCurso'] = 'editarDepartamento';
+    $_SESSION['paginaAnterior'] = 'mantenimientoDepartamentos';
+    header('Location: indexLoginLogoffTema6.php');
+    exit();
+}
+
+if(isset($_REQUEST['borrarDepartamento'])){
+    $_SESSION['descripcionDepartamentoEnCurso']=$_REQUEST['borrarDepartamento'];
+    $_SESSION['paginaEnCurso'] = 'borrarDepartamento';
+    $_SESSION['paginaAnterior'] = 'mantenimientoDepartamentos';
+    header('Location: indexLoginLogoffTema6.php');
+    exit();
+}
 
 function cargarTabla($descripcion=null){
     //Lanzamos un query de consulta y lo guardamos en una variable
@@ -49,10 +72,12 @@ function cargarTabla($descripcion=null){
         echo "<td>" . date_format(new DateTime($oDepartamento->getAlta()), "d/m/Y") . "</td>";
         echo "<td>" . str_replace(".", ",", $sVolumen) . "€</td>";
         echo is_null($oFechaBaja) ? '<td></td>' : "<td>" . date_format(new DateTime($oFechaBaja), "d/m/Y") . "</td>";
-        
+        echo '<td><form method="post"><input type="submit" class="borrarDepartamento" name="borrarDepartamento" value="'. $oDepartamento->getCodDepartamento() .'"></input></form></td>';
+        echo '<td><form method="post"><input type="submit" class="editarDepartamento" name="editarDepartamento" value="'. $oDepartamento->getCodDepartamento() .'"></input></form></td>';
         echo("</tr>");        
     }
 }
+
 
 
 //Cargamos el layout

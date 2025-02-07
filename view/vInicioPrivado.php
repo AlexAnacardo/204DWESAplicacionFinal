@@ -1,7 +1,7 @@
 <header id="headerPrograma">
     <img id="logo" src="webroot/images/logo.png">
     <h1>Bienvenido</h1>
-    <script src="view/mostrarNasa.js" defer></script>
+    <script src="webroot/js/mostrarNasa.js" defer></script>
     <form method='post'>                     
         <p id="zonaUsuario"><button type="submit" id="perfilUser" name="perfilUser"><img src="webroot/images/LogoUsuario.png"></button><?php echo($oUsuarioEnCurso->getDescUsuario()); ?></p>
         <div class='dropdown'>

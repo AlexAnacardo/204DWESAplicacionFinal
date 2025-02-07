@@ -827,6 +827,12 @@ header form{
     }
 }
 
+#borrarDepartamento{
+    display: flex;
+    justify-content: center;
+    
+}
+
 .borrarDepartamento{
     border: none;
     height: 40px;

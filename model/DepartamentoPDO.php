@@ -51,5 +51,9 @@ class DepartamentoPDO implements DepartamentoBD{
     public static function ActualizarDepartamento($descripcion, $volumen, $codigo){
         $sql = DBPDO::ejecutaConsulta('update T02_Departamento set T02_DescDepartamento="'.$descripcion.'", T02_VolumenDeNegocio="'.$volumen.'" where T02_CodDepartamento="'.$codigo.'"');
     }
+    
+    public static function BorrarDepartamento($codigo){
+        $sql = DBPDO::ejecutaConsulta('delete from T02_Departamento where T02_CodDepartamento="'.$codigo.'"');
+    }
 }
 ?>

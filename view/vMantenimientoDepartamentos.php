@@ -9,12 +9,18 @@
 <main id="mantenimientoDepartamentos"> 
     <form id="busquedaDepartamento" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" novalidate>                                                                                                  
         <div id="divDescripcion">
-            <label for="descripcion">Descripcion: </label>
-            <textarea name="descripcion" id="descripcion" rows="2" cols="50" style="resize: none"><?php echo (isset($_SESSION['descripcionDepartamentoSolicitada']) ? $_SESSION['descripcionDepartamentoSolicitada'] : ''); ?></textarea>
-        </div>                                
-        <div id="divEnviar">
-            <input type="submit" name="buscar" id="buscar" value="Buscar">
-        </div>                                
+            <section>
+                <label for="descripcion">Descripcion: </label>
+                <textarea name="descripcion" id="descripcion" rows="2" cols="50" style="resize: none"><?php echo (isset($_SESSION['descripcionDepartamentoSolicitada']) ? $_SESSION['descripcionDepartamentoSolicitada'] : ''); ?></textarea>
+                <input type="submit" name="buscar" id="buscar" value="Buscar">
+            </section>
+            <section>
+                <label for="activos">Departamentos activos</label>
+                <input type="checkbox" id="activos" name="activos">
+                <label for="inactivos">Departamentos inactivos</label>
+                <input type="checkbox" id="inactivos" name="inactivos">
+            </section>
+        </div>                                                      
     </form>
     <table>
         <thead>

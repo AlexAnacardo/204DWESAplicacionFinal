@@ -64,10 +64,24 @@ if(isset($_REQUEST['borrarDepartamento'])){
     exit();
 }
 
+if(isset($_REQUEST['altaDepartamento'])){
+    DepartamentoPDO::AltaDepartamento($_REQUEST['altaDepartamento']);
+    header('Location: index.php');
+    exit();
+}
+
+if(isset($_REQUEST['bajaDepartamento'])){
+    DepartamentoPDO::BajaDepartamento($_REQUEST['bajaDepartamento']);
+    header('Location: index.php');
+    exit();
+}
+
 function cargarTabla($descripcion=null){
     //Lanzamos un query de consulta y lo guardamos en una variable
-    if($descripcion !== null && validacionFormularios::comprobarAlfabetico($descripcion)==null){
-        $aDepartamentos= DepartamentoPDO::BuscarDepartamentoPorDescripcion($descripcion);
+    if($descripcion !== null && validacionFormularios::comprobarAlfabetico($descripcion)==null){ 
+        $bActivos=isset($_REQUEST['activos']);
+        $bInactivos=isset($_REQUEST['inactivos']);
+        $aDepartamentos= DepartamentoPDO::BuscarDepartamentoPorDescripcion($descripcion, $bActivos, $bInactivos);
     }else{
         $aDepartamentos= DepartamentoPDO::ListarDepartamentos();
     }
@@ -88,11 +102,11 @@ function cargarTabla($descripcion=null){
         echo '<td><form method="post"><input type="submit" class="borrarDepartamento" name="borrarDepartamento" value="'. $oDepartamento->getCodDepartamento() .'"></input></form></td>';
         echo '<td><form method="post"><input type="submit" class="editarDepartamento" name="editarDepartamento" value="'. $oDepartamento->getCodDepartamento() .'"></input></form></td>';
         echo '<td><form method="post"><input type="submit" class="mostrarDepartamento" name="mostrarDepartamento" value="'. $oDepartamento->getCodDepartamento() .'"></input></form></td>';
+        echo '<td><form method="post"><input type="submit" class="altaDepartamento" name="altaDepartamento" value="'. $oDepartamento->getCodDepartamento() .'"></input></form></td>';
+        echo '<td><form method="post"><input type="submit" class="bajaDepartamento" name="bajaDepartamento" value="'. $oDepartamento->getCodDepartamento() .'"></input></form></td>';
         echo("</tr>");        
     }
 }
-
-
 
 //Cargamos el layout
 require_once $view['layout'];

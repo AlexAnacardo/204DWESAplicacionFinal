@@ -624,30 +624,31 @@ header form{
     align-items: center;
     
     form{
-        margin-top: 0.3%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
+        margin-top: 0.3%;   
         height: 5%;               
         
         #divDescripcion{
+            height: 100%;
             display: flex;
+            flex-direction: column;
+            align-items: center; 
             justify-content: space-around;
-            align-items: center;            
+            
+            section{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                width: 100%;
+            }
+            
             textarea{
                 width: 50%;
-            }            
-        }
-        #divEnviar{
-            margin-top: 4%;
-            display: flex;
-            justify-content: center;
+            }  
             input{
                 background-color: #FFD814;
                 border: none;
                 border-radius: 7px;
-                padding: 30% 70%;
+                padding: 2% 5%;
             }
             input:hover{
                 background-color: #F7CA00;
@@ -667,6 +668,8 @@ header form{
     #busquedaDepartamento{
         margin-top: 0.5%;
         height: 15%;
+        width: 25%;
+        border: 1.5px solid gray;
     }
     
     #formAñadirDepartamento{
@@ -866,7 +869,29 @@ header form{
     background-position: center;
 }
 
-.borrarDepartamento:hover, .editarDepartamento:hover, .mostrarDepartamento:hover{
+.altaDepartamento{
+    border: none;
+    height: 40px;
+    width: 40px;
+    background: none;
+    color: transparent;
+    background-image: url(../images/alta.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.bajaDepartamento{
+    border: none;
+    height: 40px;
+    width: 40px;
+    background: none;
+    color: transparent;
+    background-image: url(../images/baja.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.borrarDepartamento:hover, .editarDepartamento:hover, .mostrarDepartamento:hover, .altaDepartamento:hover, .bajaDepartamento:hover{
     cursor: pointer;
 }
 

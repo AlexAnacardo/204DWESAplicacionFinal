@@ -1,0 +1,54 @@
+\doxysection{controller/c\+Rest.php File Reference}
+\hypertarget{c_rest_8php}{}\label{c_rest_8php}\index{controller/cRest.php@{controller/cRest.php}}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{c_a_xC3_xB1adir_departamento_8php_a01f379d9efd4e0bc80af457984bc5ac3}{if}}(!isset(\$array\+Vista)) \mbox{\hyperlink{c_a_xC3_xB1adir_departamento_8php_a01f379d9efd4e0bc80af457984bc5ac3}{if}}(!isset( \$\+\_\+\+SESSION\mbox{[} \textquotesingle{}Cambio\+Divisa\textquotesingle{}\mbox{]})) \mbox{\hyperlink{c_a_xC3_xB1adir_departamento_8php_a01f379d9efd4e0bc80af457984bc5ac3}{if}}(isset(\$\+\_\+\+REQUEST\mbox{[}\textquotesingle{}volver\textquotesingle{}\mbox{]})) \mbox{\hyperlink{c_a_xC3_xB1adir_departamento_8php_a01f379d9efd4e0bc80af457984bc5ac3}{if}}(!isset( \$\+\_\+\+SESSION\mbox{[} \textquotesingle{}fecha\+Foto\+Nasa\+Solicitada\textquotesingle{}\mbox{]})) \mbox{\hyperlink{c_a_xC3_xB1adir_departamento_8php_a01f379d9efd4e0bc80af457984bc5ac3}{if}}(isset(\$\+\_\+\+REQUEST\mbox{[}\textquotesingle{}solicitar\+Foto\+Nasa\textquotesingle{}\mbox{]}) \&\&\mbox{\hyperlink{classvalidacion_formularios_ab4641ed6cc37b66c56c36363197e7743}{validacion\+Formularios\+::validar\+Fecha}}(\$\+\_\+\+REQUEST\mbox{[}\textquotesingle{}solicitar\+Foto\+Nasa\textquotesingle{}\mbox{]}, strval(date\+\_\+format(new Date\+Time("{}now"{}), "{}d/m/Y"{}))==null, "{}20/06/1995"{})) \mbox{\hyperlink{c_rest_8php_a582bcac03cd024c02ca0fdaa64a2bc44}{\$o\+Imagen\+Nasa}} =\mbox{\hyperlink{class_r_e_s_t_a79c80b453ae18a1b617b7b05f0ad8b16}{REST\+::recoger\+Imagen\+Nasa}}(\$\+\_\+\+SESSION\mbox{[}\textquotesingle{}fecha\+Foto\+Nasa\+Solicitada\textquotesingle{}\mbox{]})
+\item 
+\mbox{\hyperlink{c_a_xC3_xB1adir_departamento_8php_a01f379d9efd4e0bc80af457984bc5ac3}{if}}(! \$o\+Imagen\+Nasa instanceof \mbox{\hyperlink{class_foto_nasa}{Foto\+Nasa}}) \mbox{\hyperlink{c_rest_8php_ac6ac1154cca2cef9ec31ffbc9fb4d56e}{else}}
+\item 
+\mbox{\hyperlink{c_rest_8php_aa64108b6e52dc0b7d23614cb6029a8e5}{\$array\+Vista}} \mbox{[}\textquotesingle{}Nasa\textquotesingle{}\mbox{]}\mbox{[}\textquotesingle{}Explicacion\textquotesingle{}\mbox{]} = \$o\+Imagen\+Nasa-\/$>$get\+Explicacion()
+\item 
+\mbox{\hyperlink{c_rest_8php_a527ae1671e834c595eb9e4c376b7a392}{\$array\+Vista}} \mbox{[}\textquotesingle{}Nasa\textquotesingle{}\mbox{]}\mbox{[}\textquotesingle{}Url\+Foto\textquotesingle{}\mbox{]} = \$o\+Imagen\+Nasa-\/$>$get\+Url()
+\item 
+\mbox{\hyperlink{c_rest_8php_a44b3ca3d944ebeaabcedfdd5284a0c23}{if}} (isset( \$\+\_\+\+REQUEST\mbox{[} \textquotesingle{}solicitar\+Divisa\textquotesingle{}\mbox{]}))
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{c_rest_8php_aa64108b6e52dc0b7d23614cb6029a8e5}\index{cRest.php@{cRest.php}!\$arrayVista@{\$arrayVista}}
+\index{\$arrayVista@{\$arrayVista}!cRest.php@{cRest.php}}
+\doxysubsubsection{\texorpdfstring{\$arrayVista}{\$arrayVista}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{c_rest_8php_aa64108b6e52dc0b7d23614cb6029a8e5} 
+\$array\+Vista\mbox{[} \textquotesingle{}Nasa\textquotesingle{}\mbox{]}\mbox{[} \textquotesingle{}Explicacion\textquotesingle{}\mbox{]} = \$o\+Imagen\+Nasa-\/$>$get\+Explicacion()}
+
+\Hypertarget{c_rest_8php_a527ae1671e834c595eb9e4c376b7a392}\index{cRest.php@{cRest.php}!\$arrayVista@{\$arrayVista}}
+\index{\$arrayVista@{\$arrayVista}!cRest.php@{cRest.php}}
+\doxysubsubsection{\texorpdfstring{\$arrayVista}{\$arrayVista}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{c_rest_8php_a527ae1671e834c595eb9e4c376b7a392} 
+\$array\+Vista\mbox{[} \textquotesingle{}Nasa\textquotesingle{}\mbox{]}\mbox{[} \textquotesingle{}Url\+Foto\textquotesingle{}\mbox{]} = \$o\+Imagen\+Nasa-\/$>$get\+Url()}
+
+\Hypertarget{c_rest_8php_a582bcac03cd024c02ca0fdaa64a2bc44}\index{cRest.php@{cRest.php}!\$oImagenNasa@{\$oImagenNasa}}
+\index{\$oImagenNasa@{\$oImagenNasa}!cRest.php@{cRest.php}}
+\doxysubsubsection{\texorpdfstring{\$oImagenNasa}{\$oImagenNasa}}
+{\footnotesize\ttfamily \label{c_rest_8php_a582bcac03cd024c02ca0fdaa64a2bc44} 
+\mbox{\hyperlink{c_a_xC3_xB1adir_departamento_8php_a01f379d9efd4e0bc80af457984bc5ac3}{if}}(!isset( \$array\+Vista)) \mbox{\hyperlink{c_a_xC3_xB1adir_departamento_8php_a01f379d9efd4e0bc80af457984bc5ac3}{if}}(!isset(\$\+\_\+\+SESSION\mbox{[}\textquotesingle{}Cambio\+Divisa\textquotesingle{}\mbox{]})) \mbox{\hyperlink{c_a_xC3_xB1adir_departamento_8php_a01f379d9efd4e0bc80af457984bc5ac3}{if}}(isset( \$\+\_\+\+REQUEST\mbox{[} \textquotesingle{}volver\textquotesingle{}\mbox{]})) \mbox{\hyperlink{c_a_xC3_xB1adir_departamento_8php_a01f379d9efd4e0bc80af457984bc5ac3}{if}}(!isset(\$\+\_\+\+SESSION\mbox{[}\textquotesingle{}fecha\+Foto\+Nasa\+Solicitada\textquotesingle{}\mbox{]})) \mbox{\hyperlink{c_a_xC3_xB1adir_departamento_8php_a01f379d9efd4e0bc80af457984bc5ac3}{if}} (isset( \$\+\_\+\+REQUEST\mbox{[} \textquotesingle{}solicitar\+Foto\+Nasa\textquotesingle{}\mbox{]}) \&\&\mbox{\hyperlink{classvalidacion_formularios_ab4641ed6cc37b66c56c36363197e7743}{validacion\+Formularios\+::validar\+Fecha}}( \$\+\_\+\+REQUEST\mbox{[} \textquotesingle{}solicitar\+Foto\+Nasa\textquotesingle{}\mbox{]}, strval(date\+\_\+format(new Date\+Time("{}now"{}), "{}d/m/Y"{}))==null, "{}20/06/1995"{})) \$o\+Imagen\+Nasa =\mbox{\hyperlink{class_r_e_s_t_a79c80b453ae18a1b617b7b05f0ad8b16}{REST\+::recoger\+Imagen\+Nasa}}(\$\+\_\+\+SESSION\mbox{[}\textquotesingle{}fecha\+Foto\+Nasa\+Solicitada\textquotesingle{}\mbox{]})}
+
+\Hypertarget{c_rest_8php_ac6ac1154cca2cef9ec31ffbc9fb4d56e}\index{cRest.php@{cRest.php}!else@{else}}
+\index{else@{else}!cRest.php@{cRest.php}}
+\doxysubsubsection{\texorpdfstring{else}{else}}
+{\footnotesize\ttfamily \label{c_rest_8php_ac6ac1154cca2cef9ec31ffbc9fb4d56e} 
+\mbox{\hyperlink{c_a_xC3_xB1adir_departamento_8php_a01f379d9efd4e0bc80af457984bc5ac3}{if}} (! \$o\+Imagen\+Nasa instanceof \mbox{\hyperlink{class_foto_nasa}{Foto\+Nasa}}) else}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{c_rest_8php_aa64108b6e52dc0b7d23614cb6029a8e5}{\$arrayVista}}[\textcolor{stringliteral}{'Nasa'}][\textcolor{stringliteral}{'Titulo'}]=\ \mbox{\hyperlink{c_rest_8php_a582bcac03cd024c02ca0fdaa64a2bc44}{\$oImagenNasa}}-\/>getTitulo()}
+
+\end{DoxyCode}
+\Hypertarget{c_rest_8php_a44b3ca3d944ebeaabcedfdd5284a0c23}\index{cRest.php@{cRest.php}!if@{if}}
+\index{if@{if}!cRest.php@{cRest.php}}
+\doxysubsubsection{\texorpdfstring{if}{if}}
+{\footnotesize\ttfamily \label{c_rest_8php_a44b3ca3d944ebeaabcedfdd5284a0c23} 
+if(isset(\$\+\_\+\+REQUEST\mbox{[}\textquotesingle{}solicitar\+Divisa\textquotesingle{}\mbox{]})) (\begin{DoxyParamCaption}\item[{isset( \$\+\_\+\+REQUEST\mbox{[} \textquotesingle{}solicitar\+Divisa\textquotesingle{}\mbox{]})}]{}{}\end{DoxyParamCaption})}
+

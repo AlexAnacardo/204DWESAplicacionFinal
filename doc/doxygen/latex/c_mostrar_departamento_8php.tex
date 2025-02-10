@@ -1,0 +1,52 @@
+\doxysection{controller/c\+Mostrar\+Departamento.php File Reference}
+\hypertarget{c_mostrar_departamento_8php}{}\label{c_mostrar_departamento_8php}\index{controller/cMostrarDepartamento.php@{controller/cMostrarDepartamento.php}}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{c_mostrar_departamento_8php_a890c856791600c7c4e1462d72a9a1552}{\$o\+Usuario\+En\+Curso}} =\$\+\_\+\+SESSION\mbox{[}"{}usuario\+DAW204\+Login\+Logoff\+Tema6"{}\mbox{]}
+\item 
+\mbox{\hyperlink{c_mostrar_departamento_8php_a0828e429375a664a7b98e72c03299823}{\$o\+Departamento\+En\+Curso}} = \mbox{\hyperlink{class_departamento_p_d_o_a1ecf92948a187c050d55aa1a7cf50a43}{Departamento\+PDO\+::\+Obtener\+Departamento}}(\$\+\_\+\+SESSION\mbox{[}\textquotesingle{}descripcion\+Departamento\+En\+Curso\textquotesingle{}\mbox{]})
+\item 
+\mbox{\hyperlink{c_mostrar_departamento_8php_a4d8ad3806807d9df8d06a91e149198b8}{\$a\+Vista}}
+\item 
+\mbox{\hyperlink{c_mostrar_departamento_8php_a7ad566c017a59e50b58b191af2aa8ee9}{if}} (isset( \$\+\_\+\+REQUEST\mbox{[} \textquotesingle{}aceptar\+Mostrar\textquotesingle{}\mbox{]}))
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{c_mostrar_departamento_8php_a4d8ad3806807d9df8d06a91e149198b8}\index{cMostrarDepartamento.php@{cMostrarDepartamento.php}!\$aVista@{\$aVista}}
+\index{\$aVista@{\$aVista}!cMostrarDepartamento.php@{cMostrarDepartamento.php}}
+\doxysubsubsection{\texorpdfstring{\$aVista}{\$aVista}}
+{\footnotesize\ttfamily \label{c_mostrar_departamento_8php_a4d8ad3806807d9df8d06a91e149198b8} 
+\$a\+Vista}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=[}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{'nombreUsuario'}\ =>\ \mbox{\hyperlink{c_a_xC3_xB1adir_departamento_8php_a890c856791600c7c4e1462d72a9a1552}{\$oUsuarioEnCurso}}-\/>getDescUsuario(),}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{'codigo'}\ =>\ \mbox{\hyperlink{c_editar_departamento_8php_a0828e429375a664a7b98e72c03299823}{\$oDepartamentoEnCurso}}-\/>getCodDepartamento(),}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{'descripcion'}\ =>\ \mbox{\hyperlink{c_editar_departamento_8php_a0828e429375a664a7b98e72c03299823}{\$oDepartamentoEnCurso}}-\/>getDescripcion(),}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{'volumen'}\ =>\ \mbox{\hyperlink{c_editar_departamento_8php_a0828e429375a664a7b98e72c03299823}{\$oDepartamentoEnCurso}}-\/>getVolumen(),}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{'fechaAlta'}\ =>\ \mbox{\hyperlink{c_editar_departamento_8php_a0828e429375a664a7b98e72c03299823}{\$oDepartamentoEnCurso}}-\/>getAlta(),}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{'fechaBaja'}\ =>\ \mbox{\hyperlink{c_editar_departamento_8php_a0828e429375a664a7b98e72c03299823}{\$oDepartamentoEnCurso}}-\/>getBaja(),}
+\DoxyCodeLine{]}
+
+\end{DoxyCode}
+\Hypertarget{c_mostrar_departamento_8php_a0828e429375a664a7b98e72c03299823}\index{cMostrarDepartamento.php@{cMostrarDepartamento.php}!\$oDepartamentoEnCurso@{\$oDepartamentoEnCurso}}
+\index{\$oDepartamentoEnCurso@{\$oDepartamentoEnCurso}!cMostrarDepartamento.php@{cMostrarDepartamento.php}}
+\doxysubsubsection{\texorpdfstring{\$oDepartamentoEnCurso}{\$oDepartamentoEnCurso}}
+{\footnotesize\ttfamily \label{c_mostrar_departamento_8php_a0828e429375a664a7b98e72c03299823} 
+\$o\+Departamento\+En\+Curso = \mbox{\hyperlink{class_departamento_p_d_o_a1ecf92948a187c050d55aa1a7cf50a43}{Departamento\+PDO\+::\+Obtener\+Departamento}}(\$\+\_\+\+SESSION\mbox{[}\textquotesingle{}descripcion\+Departamento\+En\+Curso\textquotesingle{}\mbox{]})}
+
+\Hypertarget{c_mostrar_departamento_8php_a890c856791600c7c4e1462d72a9a1552}\index{cMostrarDepartamento.php@{cMostrarDepartamento.php}!\$oUsuarioEnCurso@{\$oUsuarioEnCurso}}
+\index{\$oUsuarioEnCurso@{\$oUsuarioEnCurso}!cMostrarDepartamento.php@{cMostrarDepartamento.php}}
+\doxysubsubsection{\texorpdfstring{\$oUsuarioEnCurso}{\$oUsuarioEnCurso}}
+{\footnotesize\ttfamily \label{c_mostrar_departamento_8php_a890c856791600c7c4e1462d72a9a1552} 
+\$o\+Usuario\+En\+Curso =\$\+\_\+\+SESSION\mbox{[}"{}usuario\+DAW204\+Login\+Logoff\+Tema6"{}\mbox{]}}
+
+\Hypertarget{c_mostrar_departamento_8php_a7ad566c017a59e50b58b191af2aa8ee9}\index{cMostrarDepartamento.php@{cMostrarDepartamento.php}!if@{if}}
+\index{if@{if}!cMostrarDepartamento.php@{cMostrarDepartamento.php}}
+\doxysubsubsection{\texorpdfstring{if}{if}}
+{\footnotesize\ttfamily \label{c_mostrar_departamento_8php_a7ad566c017a59e50b58b191af2aa8ee9} 
+if(isset(\$\+\_\+\+REQUEST\mbox{[}\textquotesingle{}aceptar\+Mostrar\textquotesingle{}\mbox{]})) (\begin{DoxyParamCaption}\item[{isset( \$\+\_\+\+REQUEST\mbox{[} \textquotesingle{}aceptar\+Mostrar\textquotesingle{}\mbox{]})}]{}{}\end{DoxyParamCaption})}
+

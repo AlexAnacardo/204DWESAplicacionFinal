@@ -1,6 +1,6 @@
 <?php
     class Departamento{
-       private $codDepartamento;
+        private $codDepartamento;
         private $descripcion;
         private $alta;
         private $volumen;

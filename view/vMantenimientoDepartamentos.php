@@ -43,8 +43,14 @@
             }
         ?>        
     </table> 
-    <form id="formAñadirDeaprtamento">
-        <input type="submit" name="añadir" id="añadir" value="Añadir departamento"/>
-        <input type="submit" name="exportar" id="exportar" value="Exportar departamentos"/>
-    </form>
+    <div id="contenedorAñadirExportar">
+        <form id="formAñadirDepartamento">
+            <input type="submit" name="añadir" id="añadir" value="Añadir departamento"/>
+            <input type="submit" name="exportar" id="exportar" value="Exportar departamentos"/>        
+        </form>
+        <form id="importarDepartamento" method="POST" enctype="multipart/form-data">
+            <input type="file" name="archivo_json" id="archivo_json" accept=".json">
+            <input type="submit" name="importar" id="importar" value="Importar departamentos"/>        
+        </form>
+    </div>
 </main>

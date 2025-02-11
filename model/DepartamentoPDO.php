@@ -93,10 +93,76 @@ class DepartamentoPDO implements DepartamentoBD{
         DBPDO::ejecutaConsulta('update T02_Departamento set T02_FechaBajaDepartamento=now() where T02_CodDepartamento="'.$codigo.'"');
     }
     
-    public static function ExportarDepartamentos(){
-        $aDepartamentos=self::ListarDepartamentos('todos');
-        $fechaActual=date_format(new DateTime("now"), "Y-m-d");
-        file_put_contents("../tmp/".$fechaActual."departamentos.json", json_encode($departamentos));
+    
+    public static function ExportarDepartamentos() {    
+        $departamentos = self::ListarDepartamentos('todos');
+
+        
+        $aDepartamentos = [];
+        foreach ($departamentos as $departamento) {
+            $aDepartamentos[] = [
+                'CodDepartamento' => $departamento->getCodDepartamento(),
+                'DescDepartamento' => $departamento->getDescripcion(),
+                'FechaCreacion' => $departamento->getAlta(),
+                'VolumenDeNegocio' => $departamento->getVolumen(),
+                'FechaBaja' => $departamento->getBaja(),
+            ];
+        }
+
+        
+        $jsonDepartamentos = json_encode($aDepartamentos, JSON_PRETTY_PRINT);
+
+        
+        $nombreArchivo = 'departamentos ' . date('Y-m-d') . '.json';
+
+        
+        header('Content-Type: application/json');
+        header('Content-Disposition: attachment; filename="' . $nombreArchivo . '"');
+        header('Content-Length: ' . strlen($jsonDepartamentos));
+
+        
+        echo $jsonDepartamentos;
+        exit;
+    }    
+
+    public static function ImportarDepartamentos() {
+        // Comprobar si se ha enviado un archivo
+        if (isset($_FILES['archivo_json']) && $_FILES['archivo_json']['error'] == 0) {
+            // Obtener el contenido del archivo
+            $archivo = $_FILES['archivo_json']['tmp_name'];
+
+            // Leer el contenido del archivo JSON
+            $departamentosJson = file_get_contents($archivo);
+
+            // Decodificar el JSON en un array asociativo
+            $arrayJson = json_decode($departamentosJson, true);  // Usamos `true` para obtener un array asociativo
+            
+            
+            // Verificar que la decodificación fue exitosa
+            if ($arrayJson === null) {
+                echo "Error: El archivo JSON no es válido.";
+                return;
+            }
+            
+            
+            // Insertar cada departamento en la base de datos
+            foreach ($arrayJson as $oDepartamento) {
+                // Preparar la consulta SQL para insertar el departamento
+                $sentenciaSQL = "INSERT INTO T02_Departamento VALUES (?, ?, ?, ?, ?)";
+                $parametros = [
+                    $oDepartamento['CodDepartamento'],  // Extraemos el valor del JSON
+                    $oDepartamento['DescDepartamento'],
+                    $oDepartamento['FechaCreacion'],
+                    $oDepartamento['VolumenDeNegocio'],
+                    $oDepartamento['FechaBaja']
+                ];
+
+                // Ejecutar la consulta SQL
+                DBPDO::ejecutaConsulta($sentenciaSQL, $parametros);
+            }
+        }
     }
+
+    
 }
 ?>

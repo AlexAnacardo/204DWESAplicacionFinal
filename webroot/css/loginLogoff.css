@@ -40,8 +40,7 @@ h1{
 
  body{                              
     display: flex;
-    flex-direction: column;
-    
+    flex-direction: column;    
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;                     
     min-height: 100%;
     height: 100%;
@@ -654,15 +653,7 @@ header form{
                 background-color: #F7CA00;
             }
         }
-        #añadir{
-            background-color: #FFD814;
-            border: none;
-            border-radius: 7px;
-            padding: 10% 20%;
-        }
-        #añadir:hover{
-            background-color: #F7CA00;
-        }
+        
     }
     
     #busquedaDepartamento{
@@ -672,9 +663,58 @@ header form{
         border: 1.5px solid gray;
     }
     
-    #formAñadirDepartamento{
-        margin-top: 0;
+    #contenedorAñadirExportar{        
+        width: 100%;
+        height: 7%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 2%;
+        
+        
+        #formAñadirDepartamento{
+            margin: 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 25%;
+            height: 100%;
+            
+            input{
+                background-color: #FFD814;
+                border: none;
+                border-radius: 7px;
+                padding: 3% 2%;
+            }
+            input:hover{
+                background-color: #F7CA00;
+            }
+        }
+        
+        #importarDepartamento{
+            margin: 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 30%;
+            height: 100%;
+                        
+            background-color: gray;
+            border-radius: 5px;
+            
+            input{
+                background-color: #FFD814;
+                border: none;
+                border-radius: 7px;
+                padding: 2% 2%;
+            }
+            input:hover{
+                background-color: #F7CA00;
+            }
+        }
     }
+    
+    
     
     table, td, th, tr{
         border: 1px solid black;
@@ -682,7 +722,7 @@ header form{
         padding: 10px 50px;
     }
     
-    table{
+    table{        
         margin-top: 0.5%;
         td{text-align: center;}
         td:nth-of-type(2){text-align: left;}

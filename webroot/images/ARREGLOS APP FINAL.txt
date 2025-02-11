@@ -10,8 +10,8 @@ Añadir autor, version fecha, esas movidas
 -RSS
 -Buscar por desc y estado---HECHO
 -Color campos obligatorios en ver editar (aun si estan disabled)--HECHO
--Exportar 
--Importar
+-Exportar---HECHO
+-Importar---HECHO
 -Editar perfil
 -Cambiar pass
 -Borrar cuenta
@@ -24,4 +24,5 @@ Añadir autor, version fecha, esas movidas
 ACTUALIZAR UML
 
 -Añadir parametro "opcionBusqueda" en DepartamentoPDO y DepartamentoDB
--Añadido metodo Exportar departamento en DepartamentoPDO
+-Añadido metodo Exportar departamentos en DepartamentoPDO
+-Añadido metodo Importar departamentos en DepartamentoPDO

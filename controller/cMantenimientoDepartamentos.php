@@ -76,8 +76,43 @@ if(isset($_REQUEST['bajaDepartamento'])){
     exit();
 }
 
-if(isset($REQUEST['exportar'])){
-    DepartamentoPDO::ExportarDepartamentos();
+if(isset($_REQUEST['exportar'])){
+    try{
+        $_SESSION['paginaEnCurso'] = 'mantenimientoDepartamentos';
+        $_SESSION['paginaAnterior'] = 'mantenimientoDepartamentos';
+        DepartamentoPDO::ExportarDepartamentos();
+        header('Location: index.php');
+        exit();
+    } catch (Exception $ex) {
+        
+    } 
+}
+
+if(isset($_REQUEST['importar'])){
+    if($_FILES['archivo_json']['size'] < 41943040){
+        $_SESSION['paginaEnCurso'] = 'mantenimientoDepartamentos';
+        $_SESSION['paginaAnterior'] = 'mantenimientoDepartamentos';
+        DepartamentoPDO::ImportarDepartamentos();
+        header('Location: index.php');
+        exit();
+    }
+    else {
+        // Si se produce un error, se crea un objeto de la clase ErrorApp
+        $error = new ErrorApp(
+                $ex->getCode(),
+                $ex->getMessage(),
+                $ex->getFile(),
+                $ex->getLine(),
+                'mantenimientoDepartamentos'
+        );
+        //Guardamos el objeto ErrorApp en la sesion
+        $_SESSION['error'] = $error;
+        $_SESSION['paginaEnCurso'] = 'error';
+
+        // Redirigir al usuario a la página de error
+        header('Location: index.php');
+        exit();
+    }
 }
 
 function cargarTabla($descripcion=null){

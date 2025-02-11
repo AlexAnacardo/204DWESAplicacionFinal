@@ -832,8 +832,59 @@ header form{
 
 #borrarDepartamento{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     
+    p{
+        text-align: center;
+    }
+    
+    #aceptarBorrar{
+        background-color: #FFD814;
+        border: none;
+        border-radius: 7px;
+        padding: 1% 2%;
+    }
+    #aceptarBorrar:hover{
+        background-color: #F7CA00;
+    }
+    #cancelarBorrar{
+        background-color: red;
+        color: white;
+        border: none;
+        border-radius: 7px;
+        padding: 1% 2%;
+    }
+    #cancelarBorrar:hover{
+        background-color:  #af0c0c ;
+    }
+    
+    form{
+        width: 60%;
+        height: 85%;
+        font-size: 140%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        
+        input{
+            margin-left: 4%;
+        }
+    }
+    
+    div{
+        height: 7%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    div:nth-of-type(6){
+        justify-content: space-around;
+        
+        input{
+            margin-left: 0;
+        }
+    }
 }
 
 .borrarDepartamento{

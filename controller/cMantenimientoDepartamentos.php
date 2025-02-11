@@ -76,14 +76,16 @@ if(isset($_REQUEST['bajaDepartamento'])){
     exit();
 }
 
+if(isset($REQUEST['exportar'])){
+    DepartamentoPDO::ExportarDepartamentos();
+}
+
 function cargarTabla($descripcion=null){
     //Lanzamos un query de consulta y lo guardamos en una variable
-    if($descripcion !== null && validacionFormularios::comprobarAlfabetico($descripcion)==null){ 
-        $bActivos=isset($_REQUEST['activos']);
-        $bInactivos=isset($_REQUEST['inactivos']);
-        $aDepartamentos= DepartamentoPDO::BuscarDepartamentoPorDescripcion($descripcion, $bActivos, $bInactivos);
+    if($descripcion !== null && validacionFormularios::comprobarAlfabetico($descripcion)==null){        
+        $aDepartamentos= DepartamentoPDO::BuscarDepartamentoPorDescripcion($descripcion, isset($_REQUEST['opcionBusqueda']) ? $_REQUEST['opcionBusqueda'] : 'todos');
     }else{
-        $aDepartamentos= DepartamentoPDO::ListarDepartamentos();
+        $aDepartamentos= DepartamentoPDO::ListarDepartamentos(isset($_REQUEST['opcionBusqueda']) ? $_REQUEST['opcionBusqueda'] : 'todos');
     }
     
 
@@ -102,8 +104,12 @@ function cargarTabla($descripcion=null){
         echo '<td><form method="post"><input type="submit" class="borrarDepartamento" name="borrarDepartamento" value="'. $oDepartamento->getCodDepartamento() .'"></input></form></td>';
         echo '<td><form method="post"><input type="submit" class="editarDepartamento" name="editarDepartamento" value="'. $oDepartamento->getCodDepartamento() .'"></input></form></td>';
         echo '<td><form method="post"><input type="submit" class="mostrarDepartamento" name="mostrarDepartamento" value="'. $oDepartamento->getCodDepartamento() .'"></input></form></td>';
-        echo '<td><form method="post"><input type="submit" class="altaDepartamento" name="altaDepartamento" value="'. $oDepartamento->getCodDepartamento() .'"></input></form></td>';
-        echo '<td><form method="post"><input type="submit" class="bajaDepartamento" name="bajaDepartamento" value="'. $oDepartamento->getCodDepartamento() .'"></input></form></td>';
+        if(is_null($oFechaBaja)){
+            echo '<td><form method="post"><input type="submit" class="bajaDepartamento" name="bajaDepartamento" value="'. $oDepartamento->getCodDepartamento() .'"></input></form></td>';
+        }
+        else{
+            echo '<td><form method="post"><input type="submit" class="altaDepartamento" name="altaDepartamento" value="'. $oDepartamento->getCodDepartamento() .'"></input></form></td>';
+        }                
         echo("</tr>");        
     }
 }

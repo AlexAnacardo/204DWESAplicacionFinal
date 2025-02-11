@@ -15,10 +15,12 @@
                 <input type="submit" name="buscar" id="buscar" value="Buscar">
             </section>
             <section>
+                <label for="todos">Todos</label>
+                <input type="radio" id="todos" value="todos" name="opcionBusqueda">
                 <label for="activos">Departamentos activos</label>
-                <input type="checkbox" id="activos" name="activos">
+                <input type="radio" id="activos" value="activos" name="opcionBusqueda">
                 <label for="inactivos">Departamentos inactivos</label>
-                <input type="checkbox" id="inactivos" name="inactivos">
+                <input type="radio" id="inactivos" value="inactivos" name="opcionBusqueda">
             </section>
         </div>                                                      
     </form>
@@ -43,5 +45,6 @@
     </table> 
     <form id="formAñadirDeaprtamento">
         <input type="submit" name="añadir" id="añadir" value="Añadir departamento"/>
+        <input type="submit" name="exportar" id="exportar" value="Exportar departamentos"/>
     </form>
 </main>

@@ -45,7 +45,7 @@ $oUsuarioEnCurso=$_SESSION["usuarioDAW204LoginLogoffTema6"];
     if ($entradaOK) {        
 
         DepartamentoPDO::AñadirDepartamento($_REQUEST['codigo'], $_REQUEST['descripcion'], $_REQUEST['volumen']);
-        $_SESSION['descripcionDepartamentoSolicitada']=$_REQUEST['descripcion'];
+        
         $_SESSION['paginaEnCurso'] = 'mantenimientoDepartamentos';
         $_SESSION['paginaAnterior'] = 'añadirDepartamento';
         header('Location: index.php');

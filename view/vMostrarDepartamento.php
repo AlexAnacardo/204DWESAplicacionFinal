@@ -9,7 +9,7 @@
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" novalidate>                                                                                                  
         <div>
             <label for="codigo">Codigo del departamento: </label>
-            <input type="text" id="codigo" name="codigo" disabled value="<?php echo($aVista['codigo']) ?>">            
+            <input type="text" id="codigo" name="codigo" style="background-color: #FFF990; border: 1px solid gray" disabled value="<?php echo($aVista['codigo']) ?>">            
         </div>                                
         <div>
             <label for="descripcion">Descripcion del departamento: </label>
@@ -21,7 +21,7 @@
         </div>
         <div>
             <label for="volumen">Fecha de alta: </label>
-            <input type="text" id="volumen" name="volumen" disabled value="<?php echo($aVista['fechaAlta']) ?>">
+            <input type="text" id="volumen" name="volumen" style="background-color: #FFF990; border: 1px solid gray" disabled value="<?php echo($aVista['fechaAlta']) ?>">
         </div>
         <div>
             <label for="volumen">Fecha de baja: </label>

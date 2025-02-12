@@ -47,6 +47,7 @@
             <p><a target="blank" href="https://www.amazon.es">Pagina imitada</a></p>
             <p><a target="vlank" href="doc/phpdoc/index.html">Documentación (PhpDoc)</a></p>
             <p><a target="vlank" href="doc/doxygen/html.html">Documentación (Doxygen)</a></p>
+            <p><a type="application/rss+xml" href="webroot/feed/feed.xml">RSS</a></p>
         </footer>
      </body>
  </html>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+    <channel>
+        <title>Historial de cambios - Aplicación Final Alex Asensio Sanchez</title>
+        <link>https://alexasesan.informatica.ieslossauces.es/204DWESAplicacionFinal/index.php</link>
+        <description>Últimos cambios y actualizaciones</description>
+        <language>es</language>
+        
+        <item>
+            <title>Versión 2.0.1</title>
+            <link>https://alexasesan.informatica.ieslossauces.es/204DWESAplicacionFinal/index.php</link>
+            <description>                 
+                🔹 Iniciar sesion
+                🔹 Uso de API REST
+                🔹 Mantenimiento departamentos, importar, exportar, eliminar añadir
+            </description>
+            <pubDate>Thu, 12 Feb 2025 09:40:00 GMT</pubDate>
+        </item>
+    </channel>
+</rss>

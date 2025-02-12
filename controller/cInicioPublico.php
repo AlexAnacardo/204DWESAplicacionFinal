@@ -6,7 +6,7 @@
     if (isset($_REQUEST['login'])) {
         $_SESSION['paginaEnCurso'] = 'login';
         $_SESSION['paginaAnterior'] = 'inicioPublico';
-        header('Location: indexLoginLogoffTema6.php');
+        header('Location: index.php');
         exit();         
     }
     

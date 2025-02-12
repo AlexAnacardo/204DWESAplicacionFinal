@@ -9,7 +9,7 @@
     if(isset($_REQUEST['volver'])){
         $_SESSION['paginaEnCurso'] = 'inicioPublico';
         $_SESSION['paginaAnterior'] = 'login';
-        header('Location: indexLoginLogoffTema6.php');
+        header('Location: index.php');
         exit();             
     }
     
@@ -23,7 +23,7 @@
                 //Se nos redirecciona al programa            
                 $_SESSION['paginaEnCurso'] = 'inicioPrivado';
                 $_SESSION['paginaAnterior'] = 'login';
-                header('Location: indexLoginLogoffTema6.php');
+                header('Location: index.php');
                 exit();
             }
         } 
@@ -32,7 +32,7 @@
     if(isset($_REQUEST['botonRegistro'])){
         $_SESSION['paginaEnCurso'] = 'wip';
         $_SESSION['paginaAnterior'] = 'login';
-        header('Location: indexLoginLogoffTema6.php');
+        header('Location: index.php');
         exit();
     }
     

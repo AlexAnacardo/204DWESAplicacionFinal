@@ -79,12 +79,13 @@ class UsuarioPDO implements UsuarioDB {
     }
 
     
+    
     public static function altaUsuario() {
         
     }
 
     
-    public static function modificarusuario() {
+    public static function modificarUsuario() {
         
     }
 

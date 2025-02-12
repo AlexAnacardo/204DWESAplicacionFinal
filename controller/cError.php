@@ -6,7 +6,7 @@ $oError=$_SESSION['error'];
 //Si se pulsa volver, redirigimos a la ventana desde la que el usuario accedio al error
 if(isset($_REQUEST['volver'])){
     $_SESSION['paginaEnCurso']=$oError->getPaginaSiguiente();
-    header('Location: indexLoginLogoffTema6.php');
+    header('Location: index.php');
     exit();
 }
 //Cargamos el layout

@@ -1,0 +1,72 @@
+\doxysection{Usuario\+PDO Class Reference}
+\hypertarget{class_usuario_p_d_o}{}\label{class_usuario_p_d_o}\index{UsuarioPDO@{UsuarioPDO}}
+
+
+Inheritance diagram for Usuario\+PDO\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=152pt]{class_usuario_p_d_o__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Usuario\+PDO\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=152pt]{class_usuario_p_d_o__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_usuario_p_d_o_ae85b032587e9e5fa8844d0431f32578e}{validar\+Usuario}} (\$cod\+Usuario, \$password)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase \doxylink{class_usuario_p_d_o}{Usuario\+PDO} que implementa la interfaz \doxylink{interface_usuario_d_b}{Usuario\+DB}.
+
+Esta clase se utiliza para interactuar con la base de datos en relación con la tabla T01\+\_\+\+Usuario. Proporciona métodos para validar usuarios, registrar conexiones, y realizar otras operaciones relacionadas con la gestión de usuarios en la aplicación. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_usuario_p_d_o_ae85b032587e9e5fa8844d0431f32578e}\index{UsuarioPDO@{UsuarioPDO}!validarUsuario@{validarUsuario}}
+\index{validarUsuario@{validarUsuario}!UsuarioPDO@{UsuarioPDO}}
+\doxysubsubsection{\texorpdfstring{validarUsuario()}{validarUsuario()}}
+{\footnotesize\ttfamily \label{class_usuario_p_d_o_ae85b032587e9e5fa8844d0431f32578e} 
+static validar\+Usuario (\begin{DoxyParamCaption}\item[{}]{\$cod\+Usuario}{, }\item[{}]{\$password}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Valida un usuario en la base de datos.
+
+Este método valida un usuario comparando el código del usuario y su contraseña (codificada en SHA-\/256) con los registros de la base de datos. Si el usuario es válido, se actualiza su número de conexiones y se devuelve un objeto con los datos del usuario. Si el usuario no existe o los datos son incorrectos, devuelve null.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$cod\+Usuario} & Código del usuario. \\
+\hline
+string & {\em \$password} & Contraseña del usuario.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Usuario\texorpdfstring{$\vert$}{|}null Un objeto \doxylink{class_usuario}{Usuario} con los datos del usuario si es válido, null si no lo es. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_usuario_d_b_ae85b032587e9e5fa8844d0431f32578e}{Usuario\+DB}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{class_usuario_p_d_o_ae85b032587e9e5fa8844d0431f32578e_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+model/\mbox{\hyperlink{_usuario_p_d_o_8php}{Usuario\+PDO.\+php}}\end{DoxyCompactItemize}

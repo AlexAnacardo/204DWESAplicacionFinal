@@ -30,7 +30,7 @@ if(isset($_REQUEST['cancelarEditar'])){
     
     $_SESSION['paginaEnCurso'] = 'mantenimientoDepartamentos';
     $_SESSION['paginaAnterior'] = 'editarDepartamento';
-    header('Location: indexLoginLogoffTema6.php');
+    header('Location: index.php');
     exit();             
 }
 
@@ -54,7 +54,7 @@ if ($entradaOK) {
     DepartamentoPDO::ActualizarDepartamento($_REQUEST['descripcion'], $_REQUEST['volumen'], $_SESSION['descripcionDepartamentoEnCurso']);    
     $_SESSION['paginaEnCurso'] = 'mantenimientoDepartamentos';
     $_SESSION['paginaAnterior'] = 'editarDepartamento';
-    header('Location: indexLoginLogoffTema6.php');
+    header('Location: index.php');
 }
 
 //Cargamos el layout

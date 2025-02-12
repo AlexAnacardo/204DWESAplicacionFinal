@@ -49,7 +49,7 @@ class REST{
             $_SESSION['paginaEnCurso'] = 'error';
             
             // Redirigir al usuario a la página de error
-            header('Location: indexLoginLogoffTema6.php');
+            header('Location: index.php');
             exit();
         }
     }
@@ -78,7 +78,7 @@ class REST{
             $_SESSION['paginaEnCurso'] = 'error';
             
             // Redirigir al usuario a la página de error
-            header('Location: indexLoginLogoffTema6.php');
+            header('Location: index.php');
             exit();
         }
     }

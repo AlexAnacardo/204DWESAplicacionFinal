@@ -10,19 +10,19 @@
     //Si la cookie del idioma no esta configurada, se crea una con el valor del español por defecto
     if(!isset($_COOKIE['Idioma'])){
         setcookie('Idioma', 'es', $oFechaActual->getTimestamp()+(3600), "/");     
-        header('location:indexLoginLogoffTema6.php');
+        header('location:index.php');
     }
               
     //Si se selecciona el español como idioma, se cambia el valor de la cookie "idioma" al español
     if(isset($_REQUEST['español'])){        
         setcookie('Idioma', 'es', $oFechaActual->getTimestamp()+(3600), "/");
-        header('location:indexLoginLogoffTema6.php');
+        header('location:index.php');
     }
     
     //Si se selecciona el ingles como idioma, se cambia el valor de la cookie "idioma" al ingles
     if(isset($_REQUEST['ingles'])){       
        setcookie('Idioma', 'en', $oFechaActual->getTimestamp()+(3600), "/"); 
-       header('location:indexLoginLogoffTema6.php');       
+       header('location:index.php');       
     }
 ?>
 
@@ -46,6 +46,8 @@
             <p><a target="blank" href="doc/Curriculum.pdf">Curriculum</a></p>
             <p><a target="blank" href="https://www.amazon.es">Pagina imitada</a></p>
             <p><a target="vlank" href="doc/phpdoc/index.html">Documentación (PhpDoc)</a></p>
+            <p><a target="vlank" href="doc/doxygen/html.html">Documentación (Doxygen)</a></p>
+            <p><a type="application/rss+xml" href="webroot/feed/feed.xml">RSS</a></p>
         </footer>
      </body>
  </html>

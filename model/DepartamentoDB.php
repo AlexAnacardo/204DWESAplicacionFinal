@@ -6,6 +6,6 @@
 
     interface DepartamentoBD{
         
-        public static function BuscarDepartamentoPorDescripcion($descripcion);
+        public static function BuscarDepartamentoPorDescripcion($descripcion, $opcionBusqueda);
     }
 ?>

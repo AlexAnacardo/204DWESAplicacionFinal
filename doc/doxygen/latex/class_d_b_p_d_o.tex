@@ -1,0 +1,53 @@
+\doxysection{DBPDO Class Reference}
+\hypertarget{class_d_b_p_d_o}{}\label{class_d_b_p_d_o}\index{DBPDO@{DBPDO}}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_d_b_p_d_o_a66762029a50876685e415965fa1e2227}{ejecuta\+Consulta}} (\$sentencia\+SQL, \$parametros=null)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase para ejecutar consultas a la base de datos utilizando PDO.
+
+Esta clase proporciona un método estático para ejecutar consultas SQL en una base de datos. En caso de error, maneja las excepciones y redirige al usuario a una página de error. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_d_b_p_d_o_a66762029a50876685e415965fa1e2227}\index{DBPDO@{DBPDO}!ejecutaConsulta@{ejecutaConsulta}}
+\index{ejecutaConsulta@{ejecutaConsulta}!DBPDO@{DBPDO}}
+\doxysubsubsection{\texorpdfstring{ejecutaConsulta()}{ejecutaConsulta()}}
+{\footnotesize\ttfamily \label{class_d_b_p_d_o_a66762029a50876685e415965fa1e2227} 
+static ejecuta\+Consulta (\begin{DoxyParamCaption}\item[{}]{\$sentencia\+SQL}{, }\item[{}]{\$parametros}{ = {\ttfamily null}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Ejecuta una consulta SQL en la base de datos.
+
+Este método prepara y ejecuta una consulta SQL utilizando PDO, pasando los parámetros necesarios para la consulta. Si ocurre un error durante la ejecución, se captura la excepción y se almacena en la sesión antes de redirigir al usuario a la página de error.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$sentencia\+SQL} & La sentencia SQL que se va a ejecutar. \\
+\hline
+array | null & {\em \$parametros} & Un array opcional de parámetros para la consulta SQL.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+PDOStatement Devuelve el objeto PDOStatement si la consulta se ejecuta correctamente.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em PDOException} & Si ocurre un error en la ejecución de la consulta SQL, este será atrapado y se manejará mediante una redirección a la página de error. \\
+\hline
+\end{DoxyExceptions}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_d_b_p_d_o_a66762029a50876685e415965fa1e2227_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+model/\mbox{\hyperlink{_d_b_p_d_o_8php}{DBPDO.\+php}}\end{DoxyCompactItemize}

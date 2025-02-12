@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['recogerimagennasa_0',['recogerImagenNasa',['../class_r_e_s_t.html#a79c80b453ae18a1b617b7b05f0ad8b16',1,'REST']]],
-  ['requisitos_1',['Requisitos',['../md__r_e_a_d_m_e.html#autotoc_md6',1,'']]],
-  ['rest_2',['REST',['../class_r_e_s_t.html',1,'']]]
+  ['foreach_0',['foreach',['../v_detalle_8php.html#a6316424d50763e4436c58b1afd04261c',1,'vDetalle.php']]],
+  ['fotonasa_1',['FotoNasa',['../class_foto_nasa.html',1,'']]],
+  ['fotonasa_2ephp_2',['FotoNasa.php',['../_foto_nasa_8php.html',1,'']]],
+  ['funcionalidades_3',['Funcionalidades',['../md__r_e_a_d_m_e.html#autotoc_md5',1,'']]]
 ];

@@ -161,8 +161,6 @@ class DepartamentoPDO implements DepartamentoBD{
                 DBPDO::ejecutaConsulta($sentenciaSQL, $parametros);
             }
         }
-    }
-
-    
+    }    
 }
 ?>

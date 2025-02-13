@@ -1,19 +1,40 @@
 <?php
 class DepartamentoPDO implements DepartamentoBD{
     
-    public static function ListarDepartamentos($opcionBusqueda) {        
+    public static function ContarDepartamentos($opcion){
+        switch($opcion){
+            case "todos":
+                $sql= DBPDO::ejecutaConsulta('select count(*) from T02_Departamento'); 
+            break;
+        
+            case "activos":
+                $sql= DBPDO::ejecutaConsulta('select count(*) from T02_Departamento where T02_FechaBajaDepartamento is null');
+            break;
+        
+            case "inactivos":
+                $sql= DBPDO::ejecutaConsulta('select count(*) from T02_Departamento where T02_FechaBajaDepartamento is not null');
+            break;
+        }
+               
+        return floatval($sql->fetchColumn());
+    }
+
+    
+    public static function ListarDepartamentos($opcionBusqueda, $paginaTabla=0) { 
         switch($opcionBusqueda){
             case 'todos':
-                $sql = DBPDO::ejecutaConsulta('select * from T02_Departamento');
+                $sql = DBPDO::ejecutaConsulta('select * from T02_Departamento limit '.$paginaTabla.',5');
             break;
         
             case 'activos':
-                $sql = DBPDO::ejecutaConsulta('select * from T02_Departamento where T02_FechaBajaDepartamento is null');
+                $sql = DBPDO::ejecutaConsulta('select * from T02_Departamento where T02_FechaBajaDepartamento is null limit '.$paginaTabla.',5');
             break;
         
             case 'inactivos':                
-                $sql = DBPDO::ejecutaConsulta('select * from T02_Departamento where T02_FechaBajaDepartamento is not null');
+                $sql = DBPDO::ejecutaConsulta('select * from T02_Departamento where T02_FechaBajaDepartamento is not null limit '.$paginaTabla.',5');
             break;
+            default:
+                $sql = DBPDO::ejecutaConsulta('select * from T02_Departamento limit '.$paginaTabla.',5');
         }
         
         $aDepartamentos=[];
@@ -38,20 +59,20 @@ class DepartamentoPDO implements DepartamentoBD{
         return new Departamento($devolucion->T02_CodDepartamento, $devolucion->T02_DescDepartamento, $devolucion->T02_FechaCreacionDepartamento, $devolucion->T02_VolumenDeNegocio, $devolucion->T02_FechaBajaDepartamento);        
     }
         
-    public static function BuscarDepartamentoPorDescripcion($descripcion, $opcionBusqueda) {
+    public static function BuscarDepartamentoPorDescripcion($descripcion, $opcionBusqueda, $paginaTabla=0) {
         $descripcion='%'.$descripcion.'%';
         
         switch($opcionBusqueda){
             case 'todos':
-                $sql = DBPDO::ejecutaConsulta('select * from T02_Departamento where T02_DescDepartamento like ?', [$descripcion]);
+                $sql = DBPDO::ejecutaConsulta('select * from T02_Departamento where T02_DescDepartamento like ? limit '.$paginaTabla.',5', [$descripcion]);
             break;
         
             case 'activos':
-                $sql = DBPDO::ejecutaConsulta('select * from T02_Departamento where T02_FechaBajaDepartamento is null and T02_DescDepartamento like ?', [$descripcion]);
+                $sql = DBPDO::ejecutaConsulta('select * from T02_Departamento where T02_FechaBajaDepartamento is null and T02_DescDepartamento like ? limit '.$paginaTabla.',5', [$descripcion]);
             break;
         
             case 'inactivos':                
-                $sql = DBPDO::ejecutaConsulta('select * from T02_Departamento where T02_FechaBajaDepartamento is not null and T02_DescDepartamento like ?', [$descripcion]);
+                $sql = DBPDO::ejecutaConsulta('select * from T02_Departamento where T02_FechaBajaDepartamento is not null and T02_DescDepartamento like ? limit '.$paginaTabla.',5', [$descripcion]);
             break;
         }
         

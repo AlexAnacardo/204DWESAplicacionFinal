@@ -23,5 +23,14 @@
     //Contraseña del usuario que usaremos para conectarnos
     define('CONTRASEÑA', 'paso'); 
    */
-
+    /*
+  //Docker
+    define('CONEXION', 'mysql:host=db;port=3306;dbname=DB204DWES');
+    
+    //Nombre del usuario que usaremos para conectarnos
+    define('USUARIO', 'user204DWESAplicacionFinal');
+    
+    //Contraseña del usuario que usaremos para conectarnos
+    define('CONTRASEÑA', 'paso');      
+     */
 ?>

@@ -663,6 +663,13 @@ header form{
         border: 1.5px solid gray;
     }
     
+    #paginacion{
+        width: 20%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
     #contenedorAñadirExportar{        
         width: 100%;
         height: 7%;
@@ -982,7 +989,63 @@ header form{
     background-position: center;
 }
 
-.borrarDepartamento:hover, .editarDepartamento:hover, .mostrarDepartamento:hover, .altaDepartamento:hover, .bajaDepartamento:hover{
+.bajaDepartamento{
+    border: none;
+    height: 40px;
+    width: 40px;
+    background: none;
+    color: transparent;
+    background-image: url(../images/baja.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.primeraPagina{
+    border: none;
+    height: 40px;
+    width: 40px;
+    background: none;
+    color: transparent;
+    background-image: url(../images/pagInicio.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.anteriorPagina{
+    border: none;
+    height: 40px;
+    width: 40px;
+    background: none;
+    color: transparent;
+    background-image: url(../images/pagAnt.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.siguientePagina{
+    border: none;
+    height: 40px;
+    width: 40px;
+    background: none;
+    color: transparent;
+    background-image: url(../images/pagSig.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.ultimaPagina{
+    border: none;
+    height: 40px;
+    width: 40px;
+    background: none;
+    color: transparent;
+    background-image: url(../images/pagFinal.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.borrarDepartamento:hover, .editarDepartamento:hover, .mostrarDepartamento:hover, .altaDepartamento:hover, .bajaDepartamento:hover,
+.primeraPagina:hover, .anteriorPagina:hover, .siguientePagina:hover, .ultimaPagina:hover{
     cursor: pointer;
 }
 

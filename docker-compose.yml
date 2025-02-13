@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  # Servicio para la aplicación PHP con Apache
+  web:
+    build: .
+    container_name: aplicacion_final
+    ports:
+      - "8080:80"  # Redirige el puerto 8080 del host al puerto 80 del contenedor
+    volumes:
+      - .:/var/www/html  # Sincroniza los archivos de tu aplicación con el contenedor
+    networks:
+      - app_network
+    depends_on:
+      - db  # Espera a que la base de datos esté lista antes de arrancar
+
+  # Servicio para la base de datos MySQL
+  db:
+    image: mysql:5.7
+    container_name: db_aplicacion_final
+    environment:
+      MYSQL_ROOT_PASSWORD: paso  # Contraseña del usuario root
+      MYSQL_DATABASE: DB204DWES  # Nombre de la base de datos que se creará
+      MYSQL_USER: user204DWESAplicacionFinal  # Usuario adicional
+      MYSQL_PASSWORD: paso  # Contraseña del usuario adicional
+
+    volumes:
+      - db_data:/var/lib/mysql  # Persistir los datos de la base de datos
+      
+    ports:
+      - "3306:3306"  # Exponer el puerto 3306 de MySQL
+    networks:
+      - app_network
+
+networks:
+  app_network:
+    driver: bridge
+
+volumes:
+  db_data:
+  sql_data:

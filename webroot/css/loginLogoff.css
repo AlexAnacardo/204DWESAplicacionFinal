@@ -201,7 +201,7 @@ header form{
                 display: flex;
                 justify-content: center;
                 gap: 10px;
-                margin-left: 140%;
+                margin-left: 130%;
             }  
             input{
                 display: none;

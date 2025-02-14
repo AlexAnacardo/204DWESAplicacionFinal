@@ -43,12 +43,13 @@
             <input type="radio" name="rd" id="seven">
             <div class="photos">
                 <img src="webroot/images/navegacion.PNG" alt="">
-                <img src="webroot/images/DiagramaClases.png" alt="">
+                <img src="webroot/images/Diagrama.png" alt="">
                 <img src="webroot/images/CasosUso.png" alt="">
                 <img src="webroot/images/RelacionFicheros.PNG" alt="">
                 <img src="webroot/images/uso$SESSION.png" alt="">
                 <img src="webroot/images/EstructuraDirectorios.PNG" alt="">
                 <img src="webroot/images/ModeloFisicoDatos.png" alt="">
+                
             </div>
             <div class="buttons">
                 <label for="one" id="lbl1"></label>

@@ -1,13 +1,5 @@
 var searchData=
 [
-  ['dbpdo_0',['DBPDO',['../class_d_b_p_d_o.html',1,'']]],
-  ['dbpdo_2ephp_1',['DBPDO.php',['../_d_b_p_d_o_8php.html',1,'']]],
-  ['departamento_2',['Departamento',['../class_departamento.html',1,'']]],
-  ['departamento_2ephp_3',['Departamento.php',['../_departamento_8php.html',1,'']]],
-  ['departamentobd_4',['DepartamentoBD',['../interface_departamento_b_d.html',1,'']]],
-  ['departamentodb_2ephp_5',['DepartamentoDB.php',['../_departamento_d_b_8php.html',1,'']]],
-  ['departamentopdo_6',['DepartamentoPDO',['../class_departamento_p_d_o.html',1,'']]],
-  ['departamentopdo_2ephp_7',['DepartamentoPDO.php',['../_departamento_p_d_o_8php.html',1,'']]],
-  ['desarrollo_20web_20en_20entorno_20servidor_8',['Asignatura: Desarrollo Web en Entorno Servidor',['../md__r_e_a_d_m_e.html#autotoc_md1',1,'']]],
-  ['descripción_9',['Descripción',['../md__r_e_a_d_m_e.html#autotoc_md3',1,'']]]
+  ['if_0',['if',['../index_8php.html#aacd3873f7147e31087e235476f1b9f3e',1,'index.php']]],
+  ['index_2ephp_1',['index.php',['../index_8php.html',1,'']]]
 ];

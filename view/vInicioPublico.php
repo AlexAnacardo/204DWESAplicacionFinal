@@ -39,12 +39,16 @@
             <input type="radio" name="rd" id="three">
             <input type="radio" name="rd" id="four">
             <input type="radio" name="rd" id="five">
+            <input type="radio" name="rd" id="six">
+            <input type="radio" name="rd" id="seven">
             <div class="photos">
                 <img src="webroot/images/navegacion.PNG" alt="">
                 <img src="webroot/images/DiagramaClases.png" alt="">
                 <img src="webroot/images/CasosUso.png" alt="">
                 <img src="webroot/images/RelacionFicheros.PNG" alt="">
                 <img src="webroot/images/uso$SESSION.png" alt="">
+                <img src="webroot/images/EstructuraDirectorios.PNG" alt="">
+                <img src="webroot/images/ModeloFisicoDatos.png" alt="">
             </div>
             <div class="buttons">
                 <label for="one" id="lbl1"></label>
@@ -52,6 +56,8 @@
                 <label for="three" id="lbl3"></label>
                 <label for="four" id="lbl4"></label>
                 <label for="five" id="lbl5"></label>
+                <label for="six" id="lbl6"></label>
+                <label for="seven" id="lbl7"></label>
             </div>
         </div>
     </div>    

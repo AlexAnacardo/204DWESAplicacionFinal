@@ -1,7 +1,20 @@
 <?php
 //Guardamos el usuario que ha hecho login en una variable
 $oUsuarioEnCurso=$_SESSION["usuarioDAW204LoginLogoffTema6"];
+if(!isset($_SESSION['paginaTablaEnCurso'])){
+    $_SESSION['paginaTablaEnCurso']=0;
+}
 
+if (!isset($_SESSION['opcionBusqueda'])) {
+    // Asigna un valor predeterminado si no está definida
+    $_SESSION['opcionBusqueda'] = 'todos';
+}
+
+$_SESSION['ultimaPaginaTabla']=[
+    "todos"=>(floor(DepartamentoPDO::ContarDepartamentos("todos")/5))*5,
+    "activos"=> (floor(DepartamentoPDO::ContarDepartamentos("activos")/5))*5,
+    "inactivos"=> (floor(DepartamentoPDO::ContarDepartamentos("inactivos")/5))*5 
+];
 
 
 if(isset($_REQUEST['volver'])){
@@ -19,6 +32,15 @@ if(isset($_REQUEST['perfilUser'])){
         exit();
 }
 
+if(isset($_REQUEST['buscar'])){
+    if(isset($_REQUEST['opcionBusqueda'])){
+        $_SESSION['opcionBusqueda']=$_REQUEST['opcionBusqueda'];
+    }
+    else{
+        $_SESSION['opcionBusqueda']="todos";
+    }
+    
+}
 
 //Si el campo de texto "Descripcion" ha sido inicializado, se comprueba si contiene texto, si no lo tiene se inicializa a null, y si lo tiene, se carga su valor en la variable de sesion descripcionDepartamentoEnCurso
 if(isset($_REQUEST['descripcion'])){
@@ -115,12 +137,33 @@ if(isset($_REQUEST['importar'])){
     }
 }
 
+
+if(isset($_REQUEST['primeraPagina']) && $_SESSION['paginaTablaEnCurso']!=0){
+    $_SESSION['opcionBusqueda']=$_REQUEST['opcionBusquedaOculto'];
+    $_SESSION['paginaTablaEnCurso']=0;
+}
+
+if(isset($_REQUEST['anteriorPagina']) && $_SESSION['paginaTablaEnCurso']>=5){
+    $_SESSION['opcionBusqueda']=$_REQUEST['opcionBusquedaOculto'];
+    $_SESSION['paginaTablaEnCurso']-=5;
+}
+
+if(isset($_REQUEST['siguientePagina']) && $_SESSION['paginaTablaEnCurso']<$_SESSION['ultimaPaginaTabla'][$_SESSION['opcionBusqueda']]){
+    $_SESSION['opcionBusqueda']=$_REQUEST['opcionBusquedaOculto'];
+    $_SESSION['paginaTablaEnCurso']+=5;
+}
+
+if(isset($_REQUEST['ultimaPagina'])){
+    $_SESSION['opcionBusqueda']=$_REQUEST['opcionBusquedaOculto'];
+    $_SESSION['paginaTablaEnCurso']=$_SESSION['ultimaPaginaTabla'][$_SESSION['opcionBusqueda']];
+}
+
 function cargarTabla($descripcion=null){
     //Lanzamos un query de consulta y lo guardamos en una variable
     if($descripcion !== null && validacionFormularios::comprobarAlfabetico($descripcion)==null){        
-        $aDepartamentos= DepartamentoPDO::BuscarDepartamentoPorDescripcion($descripcion, isset($_REQUEST['opcionBusqueda']) ? $_REQUEST['opcionBusqueda'] : 'todos');
+        $aDepartamentos= DepartamentoPDO::BuscarDepartamentoPorDescripcion($descripcion, $_SESSION['opcionBusqueda'], $_SESSION['paginaTablaEnCurso']);
     }else{
-        $aDepartamentos= DepartamentoPDO::ListarDepartamentos(isset($_REQUEST['opcionBusqueda']) ? $_REQUEST['opcionBusqueda'] : 'todos');
+        $aDepartamentos= DepartamentoPDO::ListarDepartamentos($_SESSION['opcionBusqueda'], $_SESSION['paginaTablaEnCurso']);
     }
     
 

@@ -1,28 +1,5 @@
-ARREGLAR DOCUM, SOLO 1 BLOQUE EN CABECERA DE CLASES
-Añadir autor, version fecha, esas movidas
 
--Diagrama de Clases
--Catalogo requisitos
--Estructura de almacenamiento
--Modelo fisico de datos
-
--Registrarse
--RSS
--Buscar por desc y estado---HECHO
--Color campos obligatorios en ver editar (aun si estan disabled)--HECHO
--Exportar---HECHO
--Importar---HECHO
--Editar perfil
--Cambiar pass
--Borrar cuenta
+EstructuraDirectorios.PNG
+ModeloFisicoDatos.png
 
 
-
-
-
-
-ACTUALIZAR UML
-
--Añadir parametro "opcionBusqueda" en DepartamentoPDO y DepartamentoDB
--Añadido metodo Exportar departamentos en DepartamentoPDO
--Añadido metodo Importar departamentos en DepartamentoPDO

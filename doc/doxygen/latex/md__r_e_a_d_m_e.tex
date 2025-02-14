@@ -28,5 +28,15 @@ Proyecto multicapa de login logoff
 
 \begin{DoxyItemize}
 \item {\bfseries{PHP 8.\+3}}
-\item {\bfseries{My\+SQL 8.\+0}} 
+\item {\bfseries{My\+SQL 8.\+0}}
 \end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md8}{}\doxysection{\texorpdfstring{Subir a Docker}{Subir a Docker}}\label{md__r_e_a_d_m_e_autotoc_md8}
+Pasos a seguir para subir esta aplicacion a Docker\+:
+
+-\/Abrir docker desktop -\/Acceder a la terminal -\/Navegar hasta el directorio de nuestra aplicacion (en el que se encuentran los archivos Dockerfile y docker-\/compose.\+yaml -\/Ejecutar el comando "{}docker compose up -\/d"{} -\/Ejecutar la imagen del contenedor, se activarán la aplicacion y la base de datos -\/Ejecutar el comando "{}docker exec -\/it db\+\_\+aplicacion\+\_\+final mysql -\/u root -\/p"{} para acceder a la base de datos -\/Crear el usuario y tablas para la aplicacion (lo mismo que los archivos crea y carga del directorio script\+DB) -\/Acceder a la aplicacion mediante localhost\+:8080 en el navegador
+
+\DoxyHorRuler{0}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md10}{}\doxysection{\texorpdfstring{Abrir aplicacion en Docker}{Abrir aplicacion en Docker}}\label{md__r_e_a_d_m_e_autotoc_md10}
+-\/Abrir docker desktop -\/Ejecutar la imagen del contenedor, se activarán la aplicacion y la base de datos -\/Acceder a la aplicacion mediante localhost\+:8080 en el navegador 

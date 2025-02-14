@@ -29,26 +29,14 @@ var NAVTREE =
       [ "Asignatura: Desarrollo Web en Entorno Servidor", "md__r_e_a_d_m_e.html#autotoc_md1", null ],
       [ "Descripción", "md__r_e_a_d_m_e.html#autotoc_md3", null ],
       [ "Funcionalidades", "md__r_e_a_d_m_e.html#autotoc_md5", null ],
-      [ "Requisitos", "md__r_e_a_d_m_e.html#autotoc_md6", null ]
-    ] ],
-    [ "Namespaces", "namespaces.html", [
-      [ "Namespace List", "namespaces.html", "namespaces_dup" ]
-    ] ],
-    [ "Data Structures", "annotated.html", [
-      [ "Data Structures", "annotated.html", "annotated_dup" ],
-      [ "Data Structure Index", "classes.html", null ],
-      [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
-      [ "Data Fields", "functions.html", [
-        [ "All", "functions.html", null ],
-        [ "Functions", "functions_func.html", null ],
-        [ "Variables", "functions_vars.html", null ]
-      ] ]
+      [ "Requisitos", "md__r_e_a_d_m_e.html#autotoc_md6", null ],
+      [ "Subir a Docker", "md__r_e_a_d_m_e.html#autotoc_md8", null ],
+      [ "Abrir aplicacion en Docker", "md__r_e_a_d_m_e.html#autotoc_md10", null ]
     ] ],
     [ "Files", "files.html", [
       [ "File List", "files.html", "files_dup" ],
       [ "Globals", "globals.html", [
         [ "All", "globals.html", null ],
-        [ "Functions", "globals_func.html", null ],
         [ "Variables", "globals_vars.html", null ]
       ] ]
     ] ]
@@ -57,7 +45,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"231018libreria_validacion_8php.html"
+"files.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

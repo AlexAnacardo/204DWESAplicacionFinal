@@ -31,7 +31,7 @@
         <input type="submit" name='volver' id='volver' value='Volver'>
     </form>
 </header>
-<main>
+<main id="mainLogin">
     <div id="login">
         <form method="post" novalidate>                
             <label for="nombre">Nombre</label>

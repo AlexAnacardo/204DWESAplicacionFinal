@@ -30,6 +30,7 @@
     //Si pulsamos "mantenimiento departamentos" guardamos la pagina actual en la sesion como "paginaAnterior" y redirigimos a la pagina "mantenimiento departamentos"
     if(isset($_REQUEST['mantDep'])){
         unset($_SESSION['descripcionDepartamentoEnCurso']);
+        $_SESSION['opcionBusqueda'] = 'todos';
         $_SESSION['paginaEnCurso'] = 'mantenimientoDepartamentos';
         $_SESSION['paginaAnterior'] = 'inicioPrivado';
         header('Location: index.php');

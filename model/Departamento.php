@@ -53,6 +53,4 @@
         public function setBaja($baja): void {
             $this->baja = $baja;
         }
-    }
-?>
-
+    }    

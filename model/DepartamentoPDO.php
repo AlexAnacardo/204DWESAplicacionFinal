@@ -1,6 +1,6 @@
 <?php
 class DepartamentoPDO implements DepartamentoBD{
-    
+            
     public static function ContarDepartamentos($opcion){
         switch($opcion){
             case "todos":
@@ -36,6 +36,25 @@ class DepartamentoPDO implements DepartamentoBD{
             default:
                 $sql = DBPDO::ejecutaConsulta('select * from T02_Departamento limit '.$paginaTabla.',5');
         }
+        
+        $aDepartamentos=[];
+        while ($oDepartamento = $sql->fetchObject()){
+            if(isset($oDepartamento->T02_CodDepartamento)){
+                $aDepartamentos[$oDepartamento->T02_CodDepartamento]=new Departamento(
+                    $oDepartamento->T02_CodDepartamento,
+                    $oDepartamento->T02_DescDepartamento,
+                    $oDepartamento->T02_FechaCreacionDepartamento,
+                    $oDepartamento->T02_VolumenDeNegocio,
+                    $oDepartamento->T02_FechaBajaDepartamento
+                );
+            }
+        }
+        
+        return $aDepartamentos;
+    }
+    
+    public static function ListarTotalDepartamentos(){
+        $sql = DBPDO::ejecutaConsulta('select * from T02_Departamento');
         
         $aDepartamentos=[];
         while ($oDepartamento = $sql->fetchObject()){
@@ -116,7 +135,8 @@ class DepartamentoPDO implements DepartamentoBD{
     
     
     public static function ExportarDepartamentos() {    
-        $departamentos = self::ListarDepartamentos('todos');
+        
+        $departamentos = self::ListarTotalDepartamentos('todos');
 
         
         $aDepartamentos = [];
